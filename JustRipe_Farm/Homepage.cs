@@ -24,8 +24,11 @@ namespace JustRipe_Farm
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			// Log off (Page 1)
-			this.Hide();
+            // Log off (Page 1)
+            // AS: I think it should be this.Close  NOT this.Hide, I think one of the mistakes I noticed
+            // AS: because it is better to use this.Close  since  this.Hide just makes it invisible to the user
+            // AS: Close  will actually close it and so the system should run quicker
+            this.Close();
 			Login page1 = new Login();
 			page1.Show();
 		}
@@ -33,15 +36,17 @@ namespace JustRipe_Farm
 		private void button2_Click(object sender, EventArgs e)
 		{
 			// Takes the user to page. which is the crops page (Page3)
-			this.Hide();
+            // AS: As above, this.Close() is more accurate
+			this.Close();
 			Crops page3 = new Crops();
 			page3.Show();
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			//this takes the user to the storage page (page4)
-			this.Hide();
+            //this takes the user to the storage page (page4)
+            // AS: As above, this.Close() is more accurate
+            this.Close();
 			Storage page4 = new Storage();
 			page4.Show();
 		
@@ -49,18 +54,25 @@ namespace JustRipe_Farm
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-			//This code takes the user to the Vehicle page (Page5)
-			this.Hide();
+            //This code takes the user to the Vehicle page (Page5)
+            // AS: As above, this.Close() is more accurate
+            this.Close();
 			Vehicle page5 = new Vehicle();
 			page5.Show();
 		}
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			//This code takes the user to the orders page (Page 6)
-			this.Hide();
+            //This code takes the user to the orders page (Page 6)
+            // AS: As above, this.Close() is more accurate
+            this.Close();
 			Orders page6 = new Orders();
 			page6.Show();
 		}
-	}
+
+        private void listBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

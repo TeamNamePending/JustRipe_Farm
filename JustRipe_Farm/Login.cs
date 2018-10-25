@@ -19,9 +19,21 @@ namespace JustRipe_Farm
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			this.Hide();
-			Homepage page2 = new Homepage();
-			page2.Show();
+            // AS: If correct login is entered then a message box will appear with customized message
+            MessageBox.Show("Correct Login, proceed!");
+
+            Homepage page2 = new Homepage();
+            page2.Show();
+            
+            this.Hide();
+
+			
 		}
-	}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // AS: Closing the program
+            this.Close();
+        }
+    }
 }

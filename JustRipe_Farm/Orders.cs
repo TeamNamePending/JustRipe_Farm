@@ -19,8 +19,9 @@ namespace JustRipe_Farm
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			//this code take the user back to the homepage
-			this.Hide();
+            //this code take the user back to the homepage
+            // AS: Same again, this.Close() is more accurate than hide
+            this.Close();
 			Homepage page2 = new Homepage();
 			page2.Show();
 		}
