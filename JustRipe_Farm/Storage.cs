@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace JustRipe_Farm
 {
-	public partial class Form3 : Form
+	public partial class Storage : Form
 	{
-		public Form3()
+		public Storage()
 		{
 			InitializeComponent();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Homepage page2 = new Homepage();
+			page2.Show();
 		}
 	}
 }

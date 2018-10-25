@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace JustRipe_Farm
 {
-	public partial class Form2 : Form
+	public partial class Login : Form
 	{
-		public Form2()
+		public Login()
 		{
 			InitializeComponent();
 		}
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
+		private void button1_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Homepage page2 = new Homepage();
+			page2.Show();
+		}
+	}
 }
