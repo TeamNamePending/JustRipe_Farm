@@ -29,13 +29,14 @@
 		private void InitializeComponent()
 		{
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Username = new System.Windows.Forms.Label();
+            this.Password = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Menu = new System.Windows.Forms.ComboBox();
+            this.JobRole = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -48,25 +49,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Just Ripe Farm";
             // 
-            // label2
+            // Username
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(139, 158);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Username: ";
+            this.Username.AutoSize = true;
+            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.Location = new System.Drawing.Point(139, 179);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(154, 31);
+            this.Username.TabIndex = 1;
+            this.Username.Text = "Username: ";
+            this.Username.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // Password
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(139, 241);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 31);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Password: ";
+            this.Password.AutoSize = true;
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(139, 241);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(149, 31);
+            this.Password.TabIndex = 2;
+            this.Password.Text = "Password: ";
             // 
             // button1
             // 
@@ -80,7 +82,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(354, 392);
+            this.button2.Location = new System.Drawing.Point(354, 375);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 46);
             this.button2.TabIndex = 4;
@@ -90,7 +92,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(304, 169);
+            this.textBox1.Location = new System.Drawing.Point(304, 186);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(211, 20);
             this.textBox1.TabIndex = 5;
@@ -110,23 +112,35 @@
             "Labourer1",
             "Labourer2",
             "Labourer3"});
-            this.Menu.Location = new System.Drawing.Point(650, 50);
+            this.Menu.Location = new System.Drawing.Point(304, 122);
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(121, 21);
+            this.Menu.Size = new System.Drawing.Size(211, 21);
             this.Menu.TabIndex = 7;
+            // 
+            // JobRole
+            // 
+            this.JobRole.AutoSize = true;
+            this.JobRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JobRole.Location = new System.Drawing.Point(139, 118);
+            this.JobRole.Name = "JobRole";
+            this.JobRole.Size = new System.Drawing.Size(129, 31);
+            this.JobRole.TabIndex = 8;
+            this.JobRole.Text = "Job Role:";
+            this.JobRole.Click += new System.EventHandler(this.label4_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.JobRole);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Password);
+            this.Controls.Add(this.Username);
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "Form1";
@@ -138,13 +152,14 @@
 		#endregion
 
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label Username;
+		private System.Windows.Forms.Label Password;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.ComboBox Menu;
-	}
+        private System.Windows.Forms.Label JobRole;
+    }
 }
 
