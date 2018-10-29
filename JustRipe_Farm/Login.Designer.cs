@@ -114,6 +114,7 @@
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(121, 21);
             this.Menu.TabIndex = 7;
+            this.Menu.SelectedIndexChanged += new System.EventHandler(this.Menu_SelectedIndexChanged);
             // 
             // Login
             // 

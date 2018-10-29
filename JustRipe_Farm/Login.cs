@@ -35,5 +35,10 @@ namespace JustRipe_Farm
             // AS: Closing the program
             this.Close();
         }
+
+        private void Menu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
