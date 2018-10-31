@@ -28,6 +28,10 @@ namespace JustRipe_Farm
             // AS: I think it should be this.Close  NOT this.Hide, I think one of the mistakes I noticed
             // AS: because it is better to use this.Close  since  this.Hide just makes it invisible to the user
             // AS: Close  will actually close it and so the system should run quicker
+
+            // Confirmation that the user has logged out of the system
+            MessageBox.Show("You have successfully logged out.");
+
             this.Close();
 			Login page1 = new Login();
 			page1.Show();
