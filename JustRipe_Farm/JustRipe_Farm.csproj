@@ -110,6 +110,9 @@
     <Compile Include="Vehicle.Designer.cs">
       <DependentUpon>Vehicle.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Database.resx">
+      <DependentUpon>Database.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
