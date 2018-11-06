@@ -89,7 +89,13 @@ namespace JustRipe_Farm
         // end of method
         }
         
+        private void LoadForm(object sender, EventArgs e)
+        {
 
+          //  string connectionString = Properties.Settings.Default.
+          //  name of connection string- intend to do this
+
+        }
     }
     
 
