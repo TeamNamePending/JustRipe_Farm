@@ -66,6 +66,12 @@
     <Compile Include="Database.Designer.cs">
       <DependentUpon>Database.cs</DependentUpon>
     </Compile>
+    <Compile Include="LabourerHomepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabourerHomepage.Designer.cs">
+      <DependentUpon>LabourerHomepage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="Database.resx">
       <DependentUpon>Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabourerHomepage.resx">
+      <DependentUpon>LabourerHomepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
