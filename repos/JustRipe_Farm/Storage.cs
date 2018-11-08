@@ -24,5 +24,22 @@ namespace JustRipe_Farm
 			Homepage page2 = new Homepage();
 			page2.Show();
 		}
-	}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            // creating new instance of login class
+            Login page1 = new Login();
+
+            // Taking user back to login page
+            page1.Show();
+
+            // Closing the current ( storage) 
+            this.Close();
+        }
+    }
 }

@@ -29,5 +29,17 @@ namespace JustRipe_Farm
 		{
 			
 		}
-	}
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            // creating instance of Login class
+            Login page1 = new Login();
+
+            // taking user back to login page
+            page1.Show();
+
+            // closing current page
+            this.Close();
+        }
+    }
 }

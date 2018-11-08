@@ -10,26 +10,30 @@ using System.Windows.Forms;
 
 namespace JustRipe_Farm
 {
-	public partial class Vehicle : Form
+	public partial class Fertilisier : Form
 	{
-		public Vehicle()
+		public Fertilisier()
 		{
 			InitializeComponent();
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void Homepage_Click(object sender, EventArgs e)
 		{
-			//this code take the user back to the homepage
-			this.Hide();
+			// Takes the user back to the homepage 
+			this.Close();
 			Homepage page2 = new Homepage();
 			page2.Show();
 		}
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            // creating instance of login class
             Login page1 = new Login();
 
+            // taking user back to the login page
             page1.Show();
+
+            // closing the current page
             this.Close();
         }
     }
