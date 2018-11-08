@@ -44,12 +44,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(723, 425);
+            this.button2.Location = new System.Drawing.Point(691, 413);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Logout";
+            this.button2.Size = new System.Drawing.Size(97, 34);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Log Out";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Storage
             // 
