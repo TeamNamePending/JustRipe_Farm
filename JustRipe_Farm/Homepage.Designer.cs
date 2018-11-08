@@ -56,7 +56,7 @@
             this.ViewCultivatingCropsButton.Name = "ViewCultivatingCropsButton";
             this.ViewCultivatingCropsButton.Size = new System.Drawing.Size(228, 64);
             this.ViewCultivatingCropsButton.TabIndex = 10;
-            this.ViewCultivatingCropsButton.Text = "Cultivating Crops";
+            this.ViewCultivatingCropsButton.Text = "Crops";
             this.ViewCultivatingCropsButton.UseVisualStyleBackColor = true;
             this.ViewCultivatingCropsButton.Click += new System.EventHandler(this.button2_Click);
             // 
