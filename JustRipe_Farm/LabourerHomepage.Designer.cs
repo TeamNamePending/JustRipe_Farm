@@ -36,6 +36,7 @@
 			this.Storage = new System.Windows.Forms.Button();
 			this.Crop = new System.Windows.Forms.Button();
 			this.Fertiliser = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label3
@@ -123,11 +124,22 @@
 			this.Fertiliser.UseVisualStyleBackColor = true;
 			this.Fertiliser.Click += new System.EventHandler(this.Fertiliser_Click);
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(668, 404);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(97, 34);
+			this.button1.TabIndex = 25;
+			this.button1.Text = "Log Out";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click_3);
+			// 
 			// LabourerHomepage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.Fertiliser);
 			this.Controls.Add(this.Crop);
 			this.Controls.Add(this.Storage);
@@ -153,5 +165,6 @@
 		private System.Windows.Forms.Button Storage;
 		private System.Windows.Forms.Button Crop;
 		private System.Windows.Forms.Button Fertiliser;
+		private System.Windows.Forms.Button button1;
 	}
 }

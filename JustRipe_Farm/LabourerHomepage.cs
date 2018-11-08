@@ -60,5 +60,15 @@ namespace JustRipe_Farm
 			Fertilisier page7 = new Fertilisier();
 			page7.Show();
 		}
+
+		private void button1_Click_3(object sender, EventArgs e)
+		{
+			//message to inform the user that they have logged out.
+			MessageBox.Show("You have successfully logged out.");
+			//Sends the user back to the login page.
+			this.Close();
+			Login page1 = new Login();
+			page1.Show();
+		}
 	}
 }
