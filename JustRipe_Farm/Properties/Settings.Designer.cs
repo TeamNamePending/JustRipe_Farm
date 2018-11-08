@@ -28,9 +28,9 @@ namespace JustRipe_Farm.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\DbCrops.mdf;I" +
             "ntegrated Security=True;Connect Timeout=30")]
-        public string DbCropsPropStr {
+        public string ConnectDatabase {
             get {
-                return ((string)(this["DbCropsPropStr"]));
+                return ((string)(this["ConnectDatabase"]));
             }
         }
     }

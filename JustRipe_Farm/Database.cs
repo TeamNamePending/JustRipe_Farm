@@ -92,8 +92,8 @@ namespace JustRipe_Farm
         private void LoadForm(object sender, EventArgs e)
         {
 
-          //  string connectionString = Properties.Settings.Default.
-          //  name of connection string- intend to do this
+            string connectionString = Properties.Settings.Default.ConnectDatabase;
+          //  connectDB = new databaseConnection;
 
         }
     }
