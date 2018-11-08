@@ -56,7 +56,7 @@
             this.ViewCultivatingCropsButton.Name = "ViewCultivatingCropsButton";
             this.ViewCultivatingCropsButton.Size = new System.Drawing.Size(228, 64);
             this.ViewCultivatingCropsButton.TabIndex = 10;
-            this.ViewCultivatingCropsButton.Text = "View Cultivating Crops";
+            this.ViewCultivatingCropsButton.Text = "Cultivating Crops";
             this.ViewCultivatingCropsButton.UseVisualStyleBackColor = true;
             this.ViewCultivatingCropsButton.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -67,7 +67,7 @@
             this.ViewStorageButton.Name = "ViewStorageButton";
             this.ViewStorageButton.Size = new System.Drawing.Size(228, 64);
             this.ViewStorageButton.TabIndex = 11;
-            this.ViewStorageButton.Text = "View Storage";
+            this.ViewStorageButton.Text = "Storage";
             this.ViewStorageButton.UseVisualStyleBackColor = true;
             this.ViewStorageButton.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -89,7 +89,7 @@
             this.ViewOrdersButton.Name = "ViewOrdersButton";
             this.ViewOrdersButton.Size = new System.Drawing.Size(228, 64);
             this.ViewOrdersButton.TabIndex = 13;
-            this.ViewOrdersButton.Text = "View Orders";
+            this.ViewOrdersButton.Text = "Orders";
             this.ViewOrdersButton.UseVisualStyleBackColor = true;
             this.ViewOrdersButton.Click += new System.EventHandler(this.button5_Click);
             // 
