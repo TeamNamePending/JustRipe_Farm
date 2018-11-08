@@ -25,5 +25,12 @@ namespace JustRipe_Farm
 			page2.Show();
 		}
 
-	}
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login page1 = new Login();
+
+            page1.Show();
+            this.Close();
+        }
+    }
 }
