@@ -73,10 +73,5 @@ namespace JustRipe_Farm
 			Orders page6 = new Orders();
 			page6.Show();
 		}
-
-        private void listBox7_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
+	}
 }

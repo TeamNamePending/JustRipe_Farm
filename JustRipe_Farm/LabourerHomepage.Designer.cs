@@ -32,14 +32,17 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.Order = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.Vehicle = new System.Windows.Forms.Button();
+			this.Storage = new System.Windows.Forms.Button();
+			this.Crop = new System.Windows.Forms.Button();
+			this.Fertiliser = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(201, 9);
+			this.label3.Location = new System.Drawing.Point(184, 9);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(392, 63);
 			this.label3.TabIndex = 17;
@@ -67,30 +70,68 @@
 			// 
 			// Order
 			// 
-			this.Order.Location = new System.Drawing.Point(168, 180);
+			this.Order.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+			this.Order.Location = new System.Drawing.Point(421, 163);
 			this.Order.Name = "Order";
-			this.Order.Size = new System.Drawing.Size(75, 23);
+			this.Order.Size = new System.Drawing.Size(228, 64);
 			this.Order.TabIndex = 20;
 			this.Order.Text = "Orders";
 			this.Order.UseVisualStyleBackColor = true;
 			this.Order.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// button1
+			// Vehicle
 			// 
-			this.button1.Location = new System.Drawing.Point(168, 272);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 21;
-			this.button1.Text = "Vehicle";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click_1);
+			this.Vehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+			this.Vehicle.Location = new System.Drawing.Point(421, 272);
+			this.Vehicle.Name = "Vehicle";
+			this.Vehicle.Size = new System.Drawing.Size(228, 64);
+			this.Vehicle.TabIndex = 21;
+			this.Vehicle.Text = "Vehicle";
+			this.Vehicle.UseVisualStyleBackColor = true;
+			this.Vehicle.Click += new System.EventHandler(this.button1_Click_1);
+			// 
+			// Storage
+			// 
+			this.Storage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+			this.Storage.Location = new System.Drawing.Point(116, 272);
+			this.Storage.Name = "Storage";
+			this.Storage.Size = new System.Drawing.Size(228, 64);
+			this.Storage.TabIndex = 22;
+			this.Storage.Text = "Storage";
+			this.Storage.UseVisualStyleBackColor = true;
+			this.Storage.Click += new System.EventHandler(this.Storage_Click);
+			// 
+			// Crop
+			// 
+			this.Crop.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+			this.Crop.Location = new System.Drawing.Point(116, 163);
+			this.Crop.Name = "Crop";
+			this.Crop.Size = new System.Drawing.Size(228, 64);
+			this.Crop.TabIndex = 23;
+			this.Crop.Text = "Crops";
+			this.Crop.UseVisualStyleBackColor = true;
+			this.Crop.Click += new System.EventHandler(this.button1_Click_2);
+			// 
+			// Fertiliser
+			// 
+			this.Fertiliser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+			this.Fertiliser.Location = new System.Drawing.Point(273, 374);
+			this.Fertiliser.Name = "Fertiliser";
+			this.Fertiliser.Size = new System.Drawing.Size(228, 64);
+			this.Fertiliser.TabIndex = 24;
+			this.Fertiliser.Text = "Fertiliser";
+			this.Fertiliser.UseVisualStyleBackColor = true;
+			this.Fertiliser.Click += new System.EventHandler(this.Fertiliser_Click);
 			// 
 			// LabourerHomepage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.Fertiliser);
+			this.Controls.Add(this.Crop);
+			this.Controls.Add(this.Storage);
+			this.Controls.Add(this.Vehicle);
 			this.Controls.Add(this.Order);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -108,6 +149,9 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button Order;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button Vehicle;
+		private System.Windows.Forms.Button Storage;
+		private System.Windows.Forms.Button Crop;
+		private System.Windows.Forms.Button Fertiliser;
 	}
 }
