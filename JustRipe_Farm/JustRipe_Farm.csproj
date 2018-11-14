@@ -67,6 +67,7 @@
     <Compile Include="Fertilisier.Designer.cs">
       <DependentUpon>Fertilisier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Field.cs" />
     <Compile Include="LabourerHomepage.cs">
       <SubType>Form</SubType>
     </Compile>

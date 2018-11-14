@@ -14,7 +14,7 @@ namespace JustRipe_Farm
 		[STAThread]
 		static void Main()
 		{
-
+            // connecting the database
             DatabaseCode.ConnectionString = Properties.Settings.Default.ConnectDatabase;
 
 			Application.EnableVisualStyles();
