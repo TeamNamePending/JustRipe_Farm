@@ -58,9 +58,9 @@
             // dgvCrops
             // 
             this.dgvCrops.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCrops.Location = new System.Drawing.Point(138, 70);
+            this.dgvCrops.Location = new System.Drawing.Point(12, 12);
             this.dgvCrops.Name = "dgvCrops";
-            this.dgvCrops.Size = new System.Drawing.Size(240, 150);
+            this.dgvCrops.Size = new System.Drawing.Size(751, 325);
             this.dgvCrops.TabIndex = 12;
             // 
             // Crops
