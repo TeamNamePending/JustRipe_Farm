@@ -74,6 +74,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Crops";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.Crops_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCrops)).EndInit();
             this.ResumeLayout(false);
 

@@ -24,6 +24,40 @@ namespace JustRipe_Farm
             dgvCrops.DataSource = ds.Tables[0];
         }
 
+        // this will store the treatment time, in milliseconds
+        int treatmentTime;
+
+        // this will store the harvest time, in milliseconds
+        int harvestTime;
+
+        // this will store the storage temperature, in degrees.
+        int storageTemperature;
+
+        int cropNumber;
+
+        // choose the fertilizer type ( temporarily a, b and c) which will be chosen at random in the constructor.
+        string[] FertilizerType = { "a", "b", "c" };
+
+        
+
+        // Constructor method for crops
+
+        public Crops(int cropID)
+        {
+            cropNumber = cropID;
+
+            // Setting up the random, use this to select random treatment, harvest, fertilizer type and storage temperature
+            Random random = new Random();
+            // Treatment time will be between 4000,9000 in milliseconds
+            treatmentTime = random.Next(4000, 9000);
+
+            // Harvest time will be between 20000 and 60000 in milliseconds
+            harvestTime = random.Next(20000, 60000);
+
+
+         
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
 		{
@@ -51,6 +85,11 @@ namespace JustRipe_Farm
         }
 
         private void dgvCrops_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Crops_Load(object sender, EventArgs e)
         {
 
         }
