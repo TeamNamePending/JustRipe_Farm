@@ -36,9 +36,9 @@ namespace JustRipe_Farm
         int cropNumber;
 
         // choose the fertilizer type ( temporarily a, b and c) which will be chosen at random in the constructor.
-        string[] FertilizerType = { "a", "b", "c" };
+        string[] FertilizerTypes = { "a", "b", "c" };
 
-        
+        string fertilizerType;
 
         // Constructor method for crops
 
@@ -54,7 +54,10 @@ namespace JustRipe_Farm
             // Harvest time will be between 20000 and 60000 in milliseconds
             harvestTime = random.Next(20000, 60000);
 
+            storageTemperature = random.Next(-10, 10);
 
+            // this will select a random fertilizer type from the array and assign to each crop
+            fertilizerType = FertilizerTypes[random.Next(FertilizerTypes.Length)];
          
         }
 
