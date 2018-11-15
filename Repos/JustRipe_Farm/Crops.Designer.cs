@@ -62,6 +62,7 @@
             this.dgvCrops.Name = "dgvCrops";
             this.dgvCrops.Size = new System.Drawing.Size(751, 325);
             this.dgvCrops.TabIndex = 12;
+            this.dgvCrops.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCrops_CellContentClick);
             // 
             // Crops
             // 

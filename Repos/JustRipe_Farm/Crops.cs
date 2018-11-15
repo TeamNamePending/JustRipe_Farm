@@ -49,5 +49,10 @@ namespace JustRipe_Farm
             // closing current page
             this.Close();
         }
+
+        private void dgvCrops_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
