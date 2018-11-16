@@ -15,9 +15,16 @@ namespace JustRipe_Farm
 		public Storage()
 		{
 			InitializeComponent();
-		}
+            load_dgvStorage();
+        }
 
-		private void button1_Click(object sender, EventArgs e)
+        private void load_dgvStorage()
+        {
+            DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM Storage");
+            dgvStorage.DataSource = ds.Tables[0];
+        }
+
+        private void button1_Click(object sender, EventArgs e)
 		{
             // AS: Same again, this.Close() is more accurate than hide
             this.Close();
@@ -40,6 +47,11 @@ namespace JustRipe_Farm
 
             // Closing the current ( storage) 
             this.Close();
+        }
+
+        private void dgvStorage_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

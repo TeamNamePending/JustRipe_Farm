@@ -15,9 +15,18 @@ namespace JustRipe_Farm
 		public Vehicle()
 		{
 			InitializeComponent();
-		}
+            load_dgvVehicle();
 
-		private void button1_Click(object sender, EventArgs e)
+        }
+
+        private void load_dgvVehicle()
+        {
+            DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM Vehicles");
+            dgvVehicle.DataSource = ds.Tables[0];
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
 		{
 			//this code take the user back to the homepage
 			this.Hide();
@@ -31,6 +40,11 @@ namespace JustRipe_Farm
 
             page1.Show();
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

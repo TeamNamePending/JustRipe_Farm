@@ -15,9 +15,16 @@ namespace JustRipe_Farm
 		public Orders()
 		{
 			InitializeComponent();
+            load_dgvOrders();
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+        private void load_dgvOrders()
+        {
+            DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM Orders");
+            dgvOrders.DataSource = ds.Tables[0];
+        }
+
+        private void button1_Click(object sender, EventArgs e)
 		{
             //this code take the user back to the homepage
             // AS: Same again, this.Close() is more accurate than hide
@@ -36,6 +43,11 @@ namespace JustRipe_Farm
 
             // closing the current ( orders) page
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

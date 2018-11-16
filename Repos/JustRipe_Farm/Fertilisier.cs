@@ -11,13 +11,21 @@ using System.Windows.Forms;
 namespace JustRipe_Farm
 {
 	public partial class Fertilisier : Form
-	{
-		public Fertilisier()
-		{
-			InitializeComponent();
-		}
+	{        
+        /*/public Fertiliser()  // brings an error - method needs a return type (didnt bring this error up for the other storage, crops, vehicles, orders, possibly because fertaliser page is not on homepage but on the labourer homepage?
+        {
+            InitializeComponent();
+            load_dgvFertilisers();
+        }*/
 
-		private void Homepage_Click(object sender, EventArgs e)
+        private void load_dgvFertilisers()
+        {
+            DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM Fertilisers");
+            dgvFertilisers.DataSource = ds.Tables[0];
+        }
+
+
+        private void Homepage_Click(object sender, EventArgs e)
 		{
 			// Takes the user back to the homepage 
 			this.Close();
@@ -35,6 +43,11 @@ namespace JustRipe_Farm
 
             // closing the current page
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

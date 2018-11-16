@@ -76,6 +76,7 @@ namespace JustRipe_Farm
             // .Fill method will fill the dataSet with data. It can add or refresh rows, in a specific range in DataSet, to match that in the DataSource
             //  using DataSet and source table names
             dataAdapter.Fill(dataSet);
+            dataAdapter.Update(dataSet);
 
             //  ending the method, return needs to be used otherwise will get an error with the code not returning a value
             //  as void is not being used,  return needs to be used.
