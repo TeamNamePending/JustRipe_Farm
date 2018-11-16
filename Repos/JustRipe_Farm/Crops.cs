@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// for the timers
+using System.Timers;
+
 namespace JustRipe_Farm
 {
 	public partial class Crops : Form
@@ -24,6 +27,19 @@ namespace JustRipe_Farm
             dgvCrops.DataSource = ds.Tables[0];
         }
 
+        // SETTING UP TIMERS FOR CROPS
+
+        // Timer, once elapsed will call method initializing new crops
+        private static System.Timers.Timer createCropTimer;
+
+        // Timer, once elapsed will call method, prompting user and pausing the harvest timer until the crop is treated
+        private static System.Timers.Timer treatmentTimer;
+
+        // Timer, once elapsed will call method, prompting user that the crop is ready to be harvested
+        private static System.Timers.Timer harvestTimer;
+
+        // SETTING UP INT VARIABLES FOR THE TIMING, STORAGE TEMPERATURE AND CROP NUMBER
+
         // this will store the treatment time, in milliseconds
         int treatmentTime;
 
@@ -35,12 +51,17 @@ namespace JustRipe_Farm
 
         int cropNumber;
 
+        // CREATING STRINGS AND LISTS.
+
         // choose the fertilizer type ( temporarily a, b and c) which will be chosen at random in the constructor.
         string[] FertilizerTypes = { "a", "b", "c" };
 
         string fertilizerType;
 
-        // Constructor method for crops
+        // list to store crops and it's attributes
+        List<CropAttributes> crops = new List<CropAttributes>();
+
+        // Constructor method for crops. This method will be called when the createCropTimer elapses
 
         public Crops(int cropID)
         {
@@ -58,7 +79,18 @@ namespace JustRipe_Farm
 
             // this will select a random fertilizer type from the array and assign to each crop
             fertilizerType = FertilizerTypes[random.Next(FertilizerTypes.Length)];
-         
+
+
+            // Intend to use this to assign fertilizer type to crop
+            switch (FertilizerTypes)
+            {
+
+                
+
+
+
+            }
+
         }
 
 

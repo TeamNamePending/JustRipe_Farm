@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CropAttributes.cs" />
     <Compile Include="DatabaseCode.cs" />
     <Compile Include="Fertilisier.cs">
       <SubType>Form</SubType>
