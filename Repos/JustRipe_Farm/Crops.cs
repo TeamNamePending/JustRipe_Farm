@@ -54,12 +54,13 @@ namespace JustRipe_Farm
         // CREATING STRINGS AND LISTS.
 
         // choose the fertilizer type ( temporarily a, b and c) which will be chosen at random in the constructor.
-        string[] FertilizerTypes = { "a", "b", "c" };
+        char[] FertilizerTypes = { 'a', 'b', 'c'};
 
-        string fertilizerType;
+        char fertilizerType;
 
         // list to store crops and it's attributes
         List<CropAttributes> crops = new List<CropAttributes>();
+
 
         // Constructor method for crops. This method will be called when the createCropTimer elapses
 
@@ -81,14 +82,24 @@ namespace JustRipe_Farm
             fertilizerType = FertilizerTypes[random.Next(FertilizerTypes.Length)];
 
 
-            // Intend to use this to assign fertilizer type to crop
-            switch (FertilizerTypes)
+            // Intend to use this to assign fertilizer type to crop. IF THIS IS NEEDED
+            switch (fertilizerType)
             {
-
-                
-
+                case 'a':
 
 
+
+                break;
+
+
+                      case 'b':
+
+
+                      break;
+
+                case 'c':
+
+                    break;
             }
 
         }
