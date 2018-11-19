@@ -13,13 +13,13 @@ using System.Timers;
 
 namespace JustRipe_Farm
 {
-	public partial class Crops : Form
-	{
-		public Crops()
-		{
-			InitializeComponent();
+    public partial class Crops : Form
+    {
+        public Crops()
+        {
+            InitializeComponent();
             load_dgvCrops();
-		}
+        }
 
         private void load_dgvCrops()
         {
@@ -49,24 +49,31 @@ namespace JustRipe_Farm
         // this will store the storage temperature, in degrees.
         int storageTemperature;
 
-        int cropNumber;
+
+        public int cropNumber;
 
         // CREATING STRINGS AND LISTS.
 
         // choose the fertilizer type ( temporarily a, b and c) which will be chosen at random in the constructor.
-        char[] FertilizerTypes = { 'a', 'b', 'c'};
+        char[] FertilizerTypes = { 'a', 'b', 'c' };
+        string[] RequirementMethods = { "Method A", "Method B", "Method C" };
+        string[] StorageTypes = { "Storage A", "Storage B", "Storage C" };
 
         char fertilizerType;
+        string requirementMethod;
+        string storageType;
 
         // list to store crops and it's attributes
-        List<CropAttributes> crops = new List<CropAttributes>();
+        public static List<CropAttributes> crops = new List<CropAttributes>();
 
 
         // Constructor method for crops. This method will be called when the createCropTimer elapses
 
-        public Crops(int cropID)
+        public Crops(int ID)
         {
-            cropNumber = cropID;
+            cropNumber = ID;
+
+            cropNumber++;
 
             // Setting up the random, use this to select random treatment, harvest, fertilizer type and storage temperature
             Random random = new Random();
@@ -81,28 +88,42 @@ namespace JustRipe_Farm
             // this will select a random fertilizer type from the array and assign to each crop
             fertilizerType = FertilizerTypes[random.Next(FertilizerTypes.Length)];
 
+            requirementMethod = RequirementMethods[random.Next(RequirementMethods.Length)];
 
-            // Intend to use this to assign fertilizer type to crop. IF THIS IS NEEDED
-            switch (fertilizerType)
-            {
-                case 'a':
+            storageType = StorageTypes[random.Next(StorageTypes.Length)];
 
+         // here call function
 
-
-                break;
-
-
-                      case 'b':
-
-
-                      break;
-
-                case 'c':
-
-                    break;
-            }
+        
 
         }
+
+      public static void UpdateCrops(int cropNumber, string requirementMethod, int treatmentTime, int harvestTime, int storageTemperature, string storageType)
+
+        {
+            var ca = new CropAttributes();
+
+            ca.cropID = cropNumber;
+            ca.requiredMethods = requirementMethod;
+            ca.treatmentTime = treatmentTime;
+            ca.harvestTime = harvestTime;
+            ca.storageTemperature = storageTemperature;
+            ca.storageType = storageType;
+
+            crops.Add(ca);
+        }
+
+        public static void DisplayCropTotal()
+   
+        {
+            foreach (var ca in crops)
+                Console.WriteLine("crop no{0}, required method is:{1}, treatment time ( in milliseconds) is:{2}, harvest time ( in milliseconds) is:{3}, storage Temperature(in degrees){4},storage type{5}", ca.cropID, ca.requiredMethods, ca.treatmentTime, ca.harvestTime, ca.storageTemperature, ca.storageType);
+
+
+
+        }
+
+
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -136,6 +157,11 @@ namespace JustRipe_Farm
         }
 
         private void Crops_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

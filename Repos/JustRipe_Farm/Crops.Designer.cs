@@ -74,6 +74,7 @@
             this.label3.Size = new System.Drawing.Size(392, 63);
             this.label3.TabIndex = 17;
             this.label3.Text = "Just Ripe Farm";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Crops
             // 
