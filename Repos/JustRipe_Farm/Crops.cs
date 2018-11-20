@@ -41,16 +41,17 @@ namespace JustRipe_Farm
         // SETTING UP INT VARIABLES FOR THE TIMING, STORAGE TEMPERATURE AND CROP NUMBER
 
         // this will store the treatment time, in milliseconds
-        int treatmentTime;
+        // Have to use public static, otherwise will have errors when using this in the update function
+        public static int treatmentTime;
 
         // this will store the harvest time, in milliseconds
-        int harvestTime;
+        public static int harvestTime;
 
         // this will store the storage temperature, in degrees.
-        int storageTemperature;
+        public static int storageTemperature;
 
 
-        public int cropNumber;
+        public static int cropNumber;
 
         // CREATING STRINGS AND LISTS.
 
@@ -60,8 +61,8 @@ namespace JustRipe_Farm
         string[] StorageTypes = { "Storage A", "Storage B", "Storage C" };
 
         char fertilizerType;
-        string requirementMethod;
-        string storageType;
+        public static string requirementMethod;
+        public static string storageType;
 
         // list to store crops and it's attributes
         public static List<CropAttributes> crops = new List<CropAttributes>();
@@ -92,25 +93,33 @@ namespace JustRipe_Farm
 
             storageType = StorageTypes[random.Next(StorageTypes.Length)];
 
-         // here call function
+            // here call function
 
-        
+            UpdateCrops();
+            DisplayCropTotal();
 
+            
         }
 
-      public static void UpdateCrops(int cropNumber, string requirementMethod, int treatmentTime, int harvestTime, int storageTemperature, string storageType)
+        private void UpdateCrops()
+        {   // a suggestion as a potential fix, before I was getting an error on line 98 when call UpdateCrops method
+            // something about no arguement given that corresponds to the required formal parameter
+            throw new NotImplementedException();
+        }
+
+        public static void UpdateCrops(CropAttributes cropAttributes)
 
         {
-            var ca = new CropAttributes();
+            
 
-            ca.cropID = cropNumber;
-            ca.requiredMethods = requirementMethod;
-            ca.treatmentTime = treatmentTime;
-            ca.harvestTime = harvestTime;
-            ca.storageTemperature = storageTemperature;
-            ca.storageType = storageType;
+            cropAttributes.cropID = cropNumber;
+            cropAttributes.requiredMethods = requirementMethod;
+            cropAttributes.treatmentTime = treatmentTime;
+            cropAttributes.harvestTime = harvestTime;
+            cropAttributes.storageTemperature = storageTemperature;
+            cropAttributes.storageType = storageType;
 
-            crops.Add(ca);
+            crops.Add(cropAttributes);
         }
 
         public static void DisplayCropTotal()
@@ -165,5 +174,14 @@ namespace JustRipe_Farm
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //  This button is for testing purposes, clicking on it should call the Crops method that will create new crops
+            // Also update and display crop totals ( these methods are called at the end of the Crops method
+            Crops();
+        }
+
+        
     }
 }

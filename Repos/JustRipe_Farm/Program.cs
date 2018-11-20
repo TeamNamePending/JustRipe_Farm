@@ -20,6 +20,11 @@ namespace JustRipe_Farm
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Login());
+
+            Crops c = new Crops();
+           
+
+
 		}
 	}
 }

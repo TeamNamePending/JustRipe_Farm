@@ -73,5 +73,10 @@ namespace JustRipe_Farm
 			Orders page6 = new Orders();
 			page6.Show();
 		}
-	}
+
+        private void Homepage_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
