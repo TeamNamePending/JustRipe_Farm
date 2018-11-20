@@ -70,5 +70,10 @@ namespace JustRipe_Farm
 			Login page1 = new Login();
 			page1.Show();
 		}
-	}
+
+        private void LabourerHomepage_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
