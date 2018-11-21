@@ -35,6 +35,9 @@ namespace JustRipe_Farm
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Confirmation that the user has logged out of the system
+            MessageBox.Show("You have successfully logged out.");
+
             // creating new instance of login class
             Login page1 = new Login();
 

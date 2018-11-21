@@ -150,6 +150,9 @@ namespace JustRipe_Farm
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            // Confirmation that the user has logged out of the system
+            MessageBox.Show("You have successfully logged out.");
+
             // creating instance of Login class
             Login page1 = new Login();
 
@@ -179,7 +182,7 @@ namespace JustRipe_Farm
         {
             //  This button is for testing purposes, clicking on it should call the Crops method that will create new crops
             // Also update and display crop totals ( these methods are called at the end of the Crops method
-            Crops();
+            // Crops();
         }
 
         
