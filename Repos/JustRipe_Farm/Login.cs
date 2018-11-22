@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace JustRipe_Farm
 
         string passwordInput;      
 
-        string validUserCheck = "select * from Username where Username = @Username";
+        
 
         string validPasswordCheck = "select * from UserInfo where Username like @Username and Password like @Password";
 
@@ -32,7 +33,7 @@ namespace JustRipe_Farm
             dgvUserLogin.DataSource = ds.Tables[0];
 
         }
-
+  
 		public Login()
 		{
 			InitializeComponent();
@@ -40,6 +41,15 @@ namespace JustRipe_Farm
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
+            connection.Open();
+
+            SqlCommand sql = new SqlCommand();
+
+            string validUserCheck = sql.CommandText = "select id from Username where Username = @Username; ";
+
+
             if (userNameInput == validUserCheck)
             {
                 if (passwordInput == validPasswordCheck)
