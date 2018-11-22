@@ -1,9 +1,8 @@
 ﻿CREATE TABLE [dbo].[Containers] (
-    [CotainersId]  INT          NOT NULL,
-    [Type]         VARCHAR (10) NULL,
-    [Size]         VARCHAR (20) NULL,
+    [ContainersId]  INT          NOT NULL,
     [Availability] CHAR (1)     NULL,
-    [Price]        MONEY        NULL,
-    PRIMARY KEY CLUSTERED ([CotainersId] ASC)
+    [Max_Size] INT NULL, 
+    [Storage_Slot_number] INT NULL, 
+    PRIMARY KEY CLUSTERED ([ContainersId] ASC)
 );
 
