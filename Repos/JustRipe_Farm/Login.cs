@@ -14,7 +14,7 @@ namespace JustRipe_Farm
 	public partial class Login : Form
 	{
         string userNameInput;
-
+        string jobTypeCheck = "select userType from UserInfo where (userType == Manager)";
 
         private void load_dgvUserInfo()
         {
@@ -74,8 +74,12 @@ namespace JustRipe_Farm
             
             userNameInput = Console.ReadLine();
 
-         //   if ( userNameInput == dgvUserLogin )
+            if ( userNameInput == jobTypeCheck)
+            {
 
+
+            }
+            // else then it's labourer
         }
 
         private void dgvUserLogin_CellContentClick(object sender, DataGridViewCellEventArgs e)
