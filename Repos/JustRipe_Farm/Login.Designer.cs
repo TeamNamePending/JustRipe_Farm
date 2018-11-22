@@ -48,11 +48,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Myriad Hebrew", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(232, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(372, 66);
+            this.label1.Size = new System.Drawing.Size(397, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "Just Ripe Farm";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -112,6 +112,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(211, 20);
             this.textBox2.TabIndex = 6;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Menu
             // 

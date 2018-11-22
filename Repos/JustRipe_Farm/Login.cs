@@ -16,6 +16,16 @@ namespace JustRipe_Farm
         string userNameInput;
         string jobTypeCheck = "select userType from UserInfo where (userType == Manager)";
 
+        string passwordInput;      
+
+        string validUserCheck = "select * from Username where Username = @Username";
+
+        string validPasswordCheck = "select * from UserInfo where Username like @Username and Password like @Password";
+
+
+
+
+
         private void load_dgvUserInfo()
         {
             DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM UserInfo");
@@ -30,18 +40,56 @@ namespace JustRipe_Farm
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-            // AS: If correct login is entered then a message box will appear with customized message
-            MessageBox.Show("Correct Login, proceed!");
+            if (userNameInput == validUserCheck)
+            {
+                if (passwordInput == validPasswordCheck)
+                {
+                    // AS: If correct login is entered then a message box will appear with customized message
+                    MessageBox.Show("Correct Login, proceed!");
 
-            
+                    if (userNameInput == jobTypeCheck)
+                    {
+                        ManagerHomePage managerMenu = new ManagerHomePage();
+                        managerMenu.Show();
 
-            Homepage page2 = new Homepage();
-            page2.Show();
-            
-            this.Hide();
+                    }
+                    else
+                    {
+                        Homepage page2 = new Homepage();
+                        page2.Show();
 
-			
-		}
+                        this.Hide();
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect password!");
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid username, please try again");
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -84,6 +132,12 @@ namespace JustRipe_Farm
 
         private void dgvUserLogin_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            passwordInput = Console.ReadLine();
 
         }
     }
