@@ -50,5 +50,10 @@ namespace JustRipe_Farm
 		{
 
 		}
-	}
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
