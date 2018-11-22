@@ -86,6 +86,7 @@
             this.Controls.Add(this.Homepage);
             this.Name = "Fertilisier";
             this.Text = "Fertilisier";
+            this.Load += new System.EventHandler(this.Fertilisier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFertilisers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

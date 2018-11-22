@@ -39,7 +39,9 @@
             this.JobRole = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dgvUserLogin = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -102,6 +104,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(211, 20);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -149,11 +152,21 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 10;
             // 
+            // dgvUserLogin
+            // 
+            this.dgvUserLogin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUserLogin.Location = new System.Drawing.Point(542, 292);
+            this.dgvUserLogin.Name = "dgvUserLogin";
+            this.dgvUserLogin.Size = new System.Drawing.Size(240, 150);
+            this.dgvUserLogin.TabIndex = 11;
+            this.dgvUserLogin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserLogin_CellContentClick);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvUserLogin);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -169,6 +182,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,6 +201,7 @@
         private System.Windows.Forms.Label JobRole;
 		private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.DataGridView dgvUserLogin;
     }
 }
 

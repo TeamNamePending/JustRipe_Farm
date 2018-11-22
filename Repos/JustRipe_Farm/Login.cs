@@ -8,10 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace JustRipe_Farm
 {
 	public partial class Login : Form
 	{
+        string userNameInput;
+
+
+        private void load_dgvUserInfo()
+        {
+            DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM UserInfo");
+            dgvUserLogin.DataSource = ds.Tables[0];
+
+        }
+
 		public Login()
 		{
 			InitializeComponent();
@@ -21,6 +32,8 @@ namespace JustRipe_Farm
 		{
             // AS: If correct login is entered then a message box will appear with customized message
             MessageBox.Show("Correct Login, proceed!");
+
+            
 
             Homepage page2 = new Homepage();
             page2.Show();
@@ -52,6 +65,20 @@ namespace JustRipe_Farm
 		}
 
         private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+            userNameInput = Console.ReadLine();
+
+         //   if ( userNameInput == dgvUserLogin )
+
+        }
+
+        private void dgvUserLogin_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

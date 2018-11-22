@@ -49,5 +49,10 @@ namespace JustRipe_Farm
         {
 
         }
+
+        private void Fertilisier_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
