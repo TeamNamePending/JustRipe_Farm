@@ -70,7 +70,7 @@ namespace JustRipe_Farm
 
         // Constructor method for crops. This method will be called when the createCropTimer elapses
 
-        public Crops(int ID)
+        public void CropsInit(int ID)
         {
             cropNumber = ID;
 
@@ -182,7 +182,7 @@ namespace JustRipe_Farm
         {
             //  This button is for testing purposes, clicking on it should call the Crops method that will create new crops
             // Also update and display crop totals ( these methods are called at the end of the Crops method
-            // Crops();
+             CropsInit(6);
         }
 
         

@@ -45,10 +45,22 @@ namespace JustRipe_Farm
             connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
             connection.Open();
 
-            SqlCommand sql = new SqlCommand();
+            
+            string validUserCheck = "select UserID from Userinfo where Username = @Username AND Password = @pwd; ";
 
-            string validUserCheck = sql.CommandText = "select id from Username where Username = @Username; ";
+            SqlCommand sql = new SqlCommand(validUserCheck, connection);
 
+            sql.Parameters.Add(new SqlParameter("Username", textBox1.Text));
+            sql.Parameters.Add(new SqlParameter("pwd", textBox2.Text));
+
+            SqlDataReader dr= sql.ExecuteReader();
+
+            DataSet ds = new DataSet();
+
+            ds.Load(dr, LoadOption.PreserveChanges, "UserInfo");
+
+            dgvUserLogin.DataSource = ds.Tables[0];
+// if there is one row in the table then the credentials are correct
 
             if (userNameInput == validUserCheck)
             {

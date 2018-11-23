@@ -52,5 +52,10 @@ namespace JustRipe_Farm
         {
 
         }
+
+        private void Orders_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
