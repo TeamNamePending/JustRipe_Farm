@@ -156,9 +156,9 @@
             // dgvUserLogin
             // 
             this.dgvUserLogin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserLogin.Location = new System.Drawing.Point(633, 292);
+            this.dgvUserLogin.Location = new System.Drawing.Point(469, 292);
             this.dgvUserLogin.Name = "dgvUserLogin";
-            this.dgvUserLogin.Size = new System.Drawing.Size(167, 129);
+            this.dgvUserLogin.Size = new System.Drawing.Size(331, 129);
             this.dgvUserLogin.TabIndex = 11;
             this.dgvUserLogin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserLogin_CellContentClick);
             // 

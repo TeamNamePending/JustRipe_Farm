@@ -23,14 +23,14 @@ namespace JustRipe_Farm
 
         string validPasswordCheck = "select * from UserInfo where Username like @Username and Password like @Password";
 
-
+        
 
 
 
         private void load_dgvUserInfo()
         {
             DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM UserInfo");
-            dgvUserLogin.DataSource = ds.Tables[0];
+            dgvUserLogin.DataSource = ds.Tables[0]; 
 
         }
   
@@ -47,6 +47,7 @@ namespace JustRipe_Farm
 
             
             string validUserCheck = "select UserID from Userinfo where Username = @Username AND Password = @pwd; ";
+            
 
             SqlCommand sql = new SqlCommand(validUserCheck, connection);
 
@@ -59,46 +60,29 @@ namespace JustRipe_Farm
 
             ds.Load(dr, LoadOption.PreserveChanges, "UserInfo");
 
-            dgvUserLogin.DataSource = ds.Tables[0];
-// if there is one row in the table then the credentials are correct
+            dgvUserLogin.DataSource = ds.Tables[0];  // ds.Rows?
+            // if there is one row in the table then the credentials are correct
 
-            if (userNameInput == validUserCheck)
+
+            if (ds.Tables.Count == 1)
+
             {
-                if (passwordInput == validPasswordCheck)
-                {
-                    // AS: If correct login is entered then a message box will appear with customized message
-                    MessageBox.Show("Correct Login, proceed!");
+                MessageBox.Show("Correct login, proceed!");
 
-                    if (userNameInput == jobTypeCheck)
-                    {
-                        ManagerHomePage managerMenu = new ManagerHomePage();
-                        managerMenu.Show();
+                Homepage page2 = new Homepage();
+                page2.Show();
 
-                    }
-                    else
-                    {
-                        Homepage page2 = new Homepage();
-                        page2.Show();
-
-                        this.Hide();
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Incorrect password!");
-
-                }
+                this.Hide();
 
             }
+
             else
             {
-                MessageBox.Show("Invalid username, please try again");
+                MessageBox.Show("Incorrect password, please try again");
 
             }
-
-
-
+            
+            
 
 
 
@@ -140,15 +124,10 @@ namespace JustRipe_Farm
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
+        {          
             userNameInput = Console.ReadLine();
 
-            if ( userNameInput == jobTypeCheck)
-            {
-
-
-            }
+            
             // else then it's labourer
         }
 
