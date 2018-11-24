@@ -64,7 +64,7 @@ namespace JustRipe_Farm
             // if there is one row in the table then the credentials are correct
 
 
-            if (ds.Tables.Count == 1)
+            if (ds.Tables[0].Rows.Count == 1 )
 
             {
                 MessageBox.Show("Correct login, proceed!");
