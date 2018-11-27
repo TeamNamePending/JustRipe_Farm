@@ -50,7 +50,7 @@ namespace JustRipe_Farm
         public static int harvestTime;
 
         // this will store the storage temperature, in degrees.
-        public static int storageTemperature;
+        public static float storageTemperature;
 
 
         public static int cropNumber;
@@ -131,7 +131,7 @@ namespace JustRipe_Farm
             cropAttributes.requiredMethods = requirementMethod;
             cropAttributes.treatmentTime = treatmentTime;
             cropAttributes.harvestTime = harvestTime;
-            cropAttributes.storageTemperature = storageTemperature;
+        //    cropAttributes.storageTemperature = storageTemperature;
             cropAttributes.storageType = storageType;
 
             crops.Add(cropAttributes);
@@ -203,9 +203,9 @@ namespace JustRipe_Farm
             connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
             connection.Open();
 
-           SqlCommand  sqlAdd = new SqlCommand("INSERT INTO Crops (Temperature, TreatmentTime, HarvestTime) VALUES ( @cropValue, @treatTime @harvTime); ", connection);
+           SqlCommand  sqlAdd = new SqlCommand("INSERT INTO Crops (Temperature, TreatmentTime, HarvestTime) VALUES ( @cropValue, @treatTime, @harvTime); ", connection);
 
-            CropsInit(1);
+            CropsInit(8);
             // must remember to change the datatype in the database Crops table for these, so they display date that reflects this
             sqlAdd.Parameters.AddWithValue("@cropValue", storageTemperature);
             sqlAdd.Parameters.AddWithValue("@treatTime", treatmentDateTime);
