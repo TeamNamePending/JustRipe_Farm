@@ -66,6 +66,13 @@ namespace JustRipe_Farm
         public static string requirementMethod;
         public static string storageType;
 
+        // Date time
+        DateTime currentDateTime = DateTime.Now;
+        DateTime harvestDateTime;
+        DateTime treatmentDateTime;
+
+        
+
         // list to store crops and it's attributes
         public static List<CropAttributes> crops = new List<CropAttributes>();
 
@@ -80,11 +87,17 @@ namespace JustRipe_Farm
 
             // Setting up the random, use this to select random treatment, harvest, fertilizer type and storage temperature
             Random random = new Random();
-            // Treatment time will be between 4000,9000 in milliseconds
-            treatmentTime = random.Next(4000, 9000);
 
-            // Harvest time will be between 20000 and 60000 in milliseconds
-            harvestTime = random.Next(20000, 60000);
+
+            // For the treatment time will be one day from the current time, when the crop is planted
+            treatmentDateTime = currentDateTime.AddDays(+1);
+
+            // Harvest time will be three days from the current time, when the crop is planted
+            harvestDateTime = currentDateTime.AddDays(+3);
+
+            
+
+          
 
             storageTemperature = random.Next(-10, 10);
 
