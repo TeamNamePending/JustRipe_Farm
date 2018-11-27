@@ -203,10 +203,13 @@ namespace JustRipe_Farm
             connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
             connection.Open();
 
-           SqlCommand  sqlAdd = new SqlCommand("INSERT INTO Crops (Temperature) VALUES ( @cropValue); ", connection);
+           SqlCommand  sqlAdd = new SqlCommand("INSERT INTO Crops (Temperature, TreatmentTime, HarvestTime) VALUES ( @cropValue, @treatTime @harvTime); ", connection);
 
             CropsInit(1);
+            // must remember to change the datatype in the database Crops table for these, so they display date that reflects this
             sqlAdd.Parameters.AddWithValue("@cropValue", storageTemperature);
+            sqlAdd.Parameters.AddWithValue("@treatTime", treatmentDateTime);
+            sqlAdd.Parameters.AddWithValue("@harvTime", harvestDateTime);
             sqlAdd.ExecuteNonQuery();
         }
 
