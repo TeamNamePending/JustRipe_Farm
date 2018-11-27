@@ -78,7 +78,7 @@ namespace JustRipe_Farm
 
             else
             {
-                MessageBox.Show("Incorrect password, please try again");
+                MessageBox.Show("Incorrect credentials, please try again");
 
             }
             

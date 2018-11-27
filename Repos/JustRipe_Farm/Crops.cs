@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 // for the timers
 using System.Timers;
@@ -95,8 +97,8 @@ namespace JustRipe_Farm
 
             // here call function
 
-            UpdateCrops();
-            DisplayCropTotal();
+          //  UpdateCrops();
+           // DisplayCropTotal();
 
             
         }
@@ -182,9 +184,19 @@ namespace JustRipe_Farm
         {
             //  This button is for testing purposes, clicking on it should call the Crops method that will create new crops
             // Also update and display crop totals ( these methods are called at the end of the Crops method
-             CropsInit(6);
+           //  CropsInit(6);
+
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
+            connection.Open();
+
+           SqlCommand  sqlAdd = new SqlCommand("INSERT INTO Crops (Temperature) VALUES ( @cropValue); ", connection);
+
+            CropsInit(1);
+            sqlAdd.Parameters.AddWithValue("@cropValue", storageTemperature);
+            sqlAdd.ExecuteNonQuery();
         }
 
-        
+
     }
 }
