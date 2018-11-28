@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.Cust_ID_Txt = new System.Windows.Forms.TextBox();
+            this.Order_Info_Txt = new System.Windows.Forms.TextBox();
+            this.Total_Cost_Txt = new System.Windows.Forms.TextBox();
+            this.Item_Count_Txt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,33 +39,38 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Cust_ID_Txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 0;
+            this.Cust_ID_Txt.AccessibleName = "Cust_ID_Txt";
+            this.Cust_ID_Txt.Location = new System.Drawing.Point(129, 51);
+            this.Cust_ID_Txt.Name = "Cust_ID_Txt";
+            this.Cust_ID_Txt.Size = new System.Drawing.Size(156, 20);
+            this.Cust_ID_Txt.TabIndex = 0;
             // 
-            // textBox2
+            // Order_Info_Txt
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 20);
-            this.textBox2.TabIndex = 1;
+            this.Order_Info_Txt.AccessibleName = "Order_Info_Txt";
+            this.Order_Info_Txt.Location = new System.Drawing.Point(129, 115);
+            this.Order_Info_Txt.Name = "Order_Info_Txt";
+            this.Order_Info_Txt.Size = new System.Drawing.Size(156, 20);
+            this.Order_Info_Txt.TabIndex = 1;
             // 
-            // textBox3
+            // Total_Cost_Txt
             // 
-            this.textBox3.Location = new System.Drawing.Point(129, 180);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(156, 20);
-            this.textBox3.TabIndex = 2;
+            this.Total_Cost_Txt.AccessibleName = "Total_Cost_Txt";
+            this.Total_Cost_Txt.Location = new System.Drawing.Point(129, 180);
+            this.Total_Cost_Txt.Name = "Total_Cost_Txt";
+            this.Total_Cost_Txt.Size = new System.Drawing.Size(156, 20);
+            this.Total_Cost_Txt.TabIndex = 2;
+            this.Total_Cost_Txt.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox8
+            // Item_Count_Txt
             // 
-            this.textBox8.Location = new System.Drawing.Point(129, 239);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(156, 20);
-            this.textBox8.TabIndex = 7;
+            this.Item_Count_Txt.AccessibleName = "Item_Count_Txt";
+            this.Item_Count_Txt.Location = new System.Drawing.Point(129, 239);
+            this.Item_Count_Txt.Name = "Item_Count_Txt";
+            this.Item_Count_Txt.Size = new System.Drawing.Size(156, 20);
+            this.Item_Count_Txt.TabIndex = 7;
             // 
             // button1
             // 
@@ -73,7 +78,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Confirm";
+            this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -125,10 +130,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Item_Count_Txt);
+            this.Controls.Add(this.Total_Cost_Txt);
+            this.Controls.Add(this.Order_Info_Txt);
+            this.Controls.Add(this.Cust_ID_Txt);
             this.Name = "New_Order";
             this.Text = "New_Order";
             this.ResumeLayout(false);
@@ -138,10 +143,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox Cust_ID_Txt;
+        private System.Windows.Forms.TextBox Order_Info_Txt;
+        private System.Windows.Forms.TextBox Total_Cost_Txt;
+        private System.Windows.Forms.TextBox Item_Count_Txt;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

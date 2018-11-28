@@ -39,6 +39,9 @@ namespace JustRipe_Farm
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string Query = "insert into DbCrops.Orders (CustomerID,OrderInformation.TotalPrice,StorageRequired) values('" + this.Cust_ID_Txt.Text + "','" + this.Order_Info_Txt.Text + "','" + this.Total_Cost_Txt.Text + "','" + this.Item_Count_Txt.Text + "') ;";
+
+            MessageBox.Show("Saved!");
             this.Close();
         }
 
@@ -48,6 +51,11 @@ namespace JustRipe_Farm
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
