@@ -41,7 +41,7 @@ namespace JustRipe_Farm
 
         private void Harvesting_Load(object sender, EventArgs e)
         {
-
+            // For datagrid view, need an SQL command- to show all the data in the Crops, Harvest date column
         }
 
         private void button1_Click(object sender, EventArgs e)

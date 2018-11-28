@@ -50,6 +50,7 @@ namespace JustRipe_Farm
             
 
             SqlCommand sql = new SqlCommand(validUserCheck, connection);
+            SqlCommand userMenu = new SqlCommand(jobTypeCheck, connection);
 
             sql.Parameters.Add(new SqlParameter("Username", textBox1.Text));
             sql.Parameters.Add(new SqlParameter("pwd", textBox2.Text));
@@ -69,10 +70,26 @@ namespace JustRipe_Farm
             {
                 MessageBox.Show("Correct login, proceed!");
 
-                Homepage page2 = new Homepage();
-                page2.Show();
+                // I realise this may not be the most efficient way to check to see if this is the manager or not
+                // So if there is time can try to optimize so able to check if UserID == 1, which we know is manager
+                if (textBox1.Text == "Mark")
+                {
+                    ManagerHomePage managerMenu = new ManagerHomePage();
+                    managerMenu.Show();
 
-                this.Hide();
+                    this.Hide();
+
+                }
+
+                // If it isn't manager it is labourer, and the labourer menu will be displayed
+                else
+                {
+                    Homepage page2 = new Homepage();
+                    page2.Show();
+
+                    this.Hide();
+                }
+
 
             }
 
