@@ -39,7 +39,11 @@ namespace JustRipe_Farm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Query = "insert into DbCrops.Orders (CustomerID,OrderInformation.TotalPrice,StorageRequired) values('" + this.Cust_ID_Txt.Text + "','" + this.Order_Info_Txt.Text + "','" + this.Total_Cost_Txt.Text + "','" + this.Item_Count_Txt.Text + "') ;";
+            //DatabaseCode.getdatabaseConnection().insert(SQL.Insert,
+                                                    //Cust_ID_Txt.Text,
+                                                    //Order_Info_Txt.Text,
+                                                    //Total_Cost_Txt.Text,
+                                                    //Item_Count_Txt.Text);
 
             MessageBox.Show("Saved!");
             this.Close();
