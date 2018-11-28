@@ -37,7 +37,13 @@ namespace JustRipe_Farm
 		public Login()
 		{
 			InitializeComponent();
-		}
+
+            // To protect the password that the user enters into the text box
+            textBox2.PasswordChar = '*';
+
+            // Can limit the length of the password that the user enters
+            textBox2.MaxLength = 15;
+        }
 
 		private void button1_Click(object sender, EventArgs e)
 		{

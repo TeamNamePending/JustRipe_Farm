@@ -110,10 +110,24 @@ namespace JustRipe_Farm
 
             // here call function
 
-          //  UpdateCrops();
-           // DisplayCropTotal();
+            //  UpdateCrops();
+            // DisplayCropTotal();
+
+
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
+            connection.Open();
+
+            SqlCommand sqlAdd = new SqlCommand("INSERT INTO Crops (Temperature, TreatmentTime, HarvestTime) VALUES ( @cropValue, @treatTime, @harvTime); ", connection);
 
             
+            // must remember to change the datatype in the database Crops table for these, so they display date that reflects this
+            sqlAdd.Parameters.AddWithValue("@cropValue", storageTemperature);
+            sqlAdd.Parameters.AddWithValue("@treatTime", treatmentDateTime);
+            sqlAdd.Parameters.AddWithValue("@harvTime", harvestDateTime);
+            sqlAdd.ExecuteNonQuery();
+
+
         }
 
         private void UpdateCrops()
@@ -195,22 +209,10 @@ namespace JustRipe_Farm
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //  This button is for testing purposes, clicking on it should call the Crops method that will create new crops
-            // Also update and display crop totals ( these methods are called at the end of the Crops method
-           //  CropsInit(6);
-
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
-            connection.Open();
-
-           SqlCommand  sqlAdd = new SqlCommand("INSERT INTO Crops (Temperature, TreatmentTime, HarvestTime) VALUES ( @cropValue, @treatTime, @harvTime); ", connection);
+          
 
             CropsInit(8);
-            // must remember to change the datatype in the database Crops table for these, so they display date that reflects this
-            sqlAdd.Parameters.AddWithValue("@cropValue", storageTemperature);
-            sqlAdd.Parameters.AddWithValue("@treatTime", treatmentDateTime);
-            sqlAdd.Parameters.AddWithValue("@harvTime", harvestDateTime);
-            sqlAdd.ExecuteNonQuery();
+            
         }
 
 
