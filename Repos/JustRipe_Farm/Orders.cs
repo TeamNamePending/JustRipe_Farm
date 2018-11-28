@@ -57,5 +57,12 @@ namespace JustRipe_Farm
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            New_Order page9 = new New_Order();
+            page9.Show();
+        }
     }
 }
