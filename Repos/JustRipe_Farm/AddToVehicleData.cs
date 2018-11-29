@@ -101,6 +101,11 @@ namespace JustRipe_Farm
         {
 
         }
+
+        private void AddToVehicleData_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
-}
+

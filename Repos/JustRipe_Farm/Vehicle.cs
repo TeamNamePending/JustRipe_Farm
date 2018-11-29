@@ -55,8 +55,8 @@ namespace JustRipe_Farm
         {
             this.Close();
 
-            AddToVehicleData page12 = new AddToVehicleData();
-            page12.Show();
+           AddToVehicleData page12 = new AddToVehicleData();
+           page12.Show();
 
 
             

@@ -204,6 +204,7 @@
             this.Controls.Add(this.dgvUpdateVehicleData);
             this.Name = "AddToVehicleData";
             this.Text = "AddToVehicleData";
+            this.Load += new System.EventHandler(this.AddToVehicleData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpdateVehicleData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
