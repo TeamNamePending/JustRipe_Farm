@@ -30,24 +30,26 @@
 		{
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.Customer_ID_Txt = new System.Windows.Forms.Label();
 			this.Type_Txt = new System.Windows.Forms.Label();
 			this.Size_Txt = new System.Windows.Forms.Label();
 			this.Price_Txt = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.Typ_Txt = new System.Windows.Forms.TextBox();
+			this.Siz_Txt = new System.Windows.Forms.TextBox();
+			this.Pri_Txt = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.Reset_Txt = new System.Windows.Forms.Button();
-			this.Update_Txt = new System.Windows.Forms.Button();
+			this.Add_Storage_Txt = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.Long_Txt = new System.Windows.Forms.TextBox();
+			this.Lat_Txt = new System.Windows.Forms.TextBox();
+			this.Avab_Txt = new System.Windows.Forms.TextBox();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.Stor_Id_Txt = new System.Windows.Forms.Label();
+			this.textBox1 = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -71,20 +73,10 @@
 			this.pictureBox1.TabIndex = 32;
 			this.pictureBox1.TabStop = false;
 			// 
-			// Customer_ID_Txt
-			// 
-			this.Customer_ID_Txt.AutoSize = true;
-			this.Customer_ID_Txt.Location = new System.Drawing.Point(60, 119);
-			this.Customer_ID_Txt.Name = "Customer_ID_Txt";
-			this.Customer_ID_Txt.Size = new System.Drawing.Size(65, 13);
-			this.Customer_ID_Txt.TabIndex = 33;
-			this.Customer_ID_Txt.Text = "Customer ID";
-			this.Customer_ID_Txt.Click += new System.EventHandler(this.label2_Click);
-			// 
 			// Type_Txt
 			// 
 			this.Type_Txt.AutoSize = true;
-			this.Type_Txt.Location = new System.Drawing.Point(60, 149);
+			this.Type_Txt.Location = new System.Drawing.Point(70, 322);
 			this.Type_Txt.Name = "Type_Txt";
 			this.Type_Txt.Size = new System.Drawing.Size(31, 13);
 			this.Type_Txt.TabIndex = 34;
@@ -93,7 +85,7 @@
 			// Size_Txt
 			// 
 			this.Size_Txt.AutoSize = true;
-			this.Size_Txt.Location = new System.Drawing.Point(60, 175);
+			this.Size_Txt.Location = new System.Drawing.Point(70, 348);
 			this.Size_Txt.Name = "Size_Txt";
 			this.Size_Txt.Size = new System.Drawing.Size(27, 13);
 			this.Size_Txt.TabIndex = 35;
@@ -102,44 +94,36 @@
 			// Price_Txt
 			// 
 			this.Price_Txt.AutoSize = true;
-			this.Price_Txt.Location = new System.Drawing.Point(60, 201);
+			this.Price_Txt.Location = new System.Drawing.Point(70, 374);
 			this.Price_Txt.Name = "Price_Txt";
 			this.Price_Txt.Size = new System.Drawing.Size(31, 13);
 			this.Price_Txt.TabIndex = 36;
 			this.Price_Txt.Text = "Price";
 			// 
-			// textBox1
+			// Typ_Txt
 			// 
-			this.textBox1.Location = new System.Drawing.Point(131, 116);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(163, 20);
-			this.textBox1.TabIndex = 37;
-			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.Typ_Txt.Location = new System.Drawing.Point(141, 315);
+			this.Typ_Txt.Name = "Typ_Txt";
+			this.Typ_Txt.Size = new System.Drawing.Size(163, 20);
+			this.Typ_Txt.TabIndex = 38;
 			// 
-			// textBox2
+			// Siz_Txt
 			// 
-			this.textBox2.Location = new System.Drawing.Point(131, 142);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(163, 20);
-			this.textBox2.TabIndex = 38;
+			this.Siz_Txt.Location = new System.Drawing.Point(141, 341);
+			this.Siz_Txt.Name = "Siz_Txt";
+			this.Siz_Txt.Size = new System.Drawing.Size(163, 20);
+			this.Siz_Txt.TabIndex = 39;
 			// 
-			// textBox3
+			// Pri_Txt
 			// 
-			this.textBox3.Location = new System.Drawing.Point(131, 168);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(163, 20);
-			this.textBox3.TabIndex = 39;
-			// 
-			// textBox4
-			// 
-			this.textBox4.Location = new System.Drawing.Point(131, 194);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(163, 20);
-			this.textBox4.TabIndex = 40;
+			this.Pri_Txt.Location = new System.Drawing.Point(141, 367);
+			this.Pri_Txt.Name = "Pri_Txt";
+			this.Pri_Txt.Size = new System.Drawing.Size(163, 20);
+			this.Pri_Txt.TabIndex = 40;
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(243, 335);
+			this.button1.Location = new System.Drawing.Point(245, 523);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 41;
@@ -149,7 +133,7 @@
 			// 
 			// Reset_Txt
 			// 
-			this.Reset_Txt.Location = new System.Drawing.Point(139, 335);
+			this.Reset_Txt.Location = new System.Drawing.Point(141, 523);
 			this.Reset_Txt.Name = "Reset_Txt";
 			this.Reset_Txt.Size = new System.Drawing.Size(75, 23);
 			this.Reset_Txt.TabIndex = 42;
@@ -157,20 +141,20 @@
 			this.Reset_Txt.UseVisualStyleBackColor = true;
 			this.Reset_Txt.Click += new System.EventHandler(this.Reset_Txt_Click);
 			// 
-			// Update_Txt
+			// Add_Storage_Txt
 			// 
-			this.Update_Txt.Location = new System.Drawing.Point(35, 335);
-			this.Update_Txt.Name = "Update_Txt";
-			this.Update_Txt.Size = new System.Drawing.Size(75, 23);
-			this.Update_Txt.TabIndex = 43;
-			this.Update_Txt.Text = "Update";
-			this.Update_Txt.UseVisualStyleBackColor = true;
-			this.Update_Txt.Click += new System.EventHandler(this.button2_Click);
+			this.Add_Storage_Txt.Location = new System.Drawing.Point(37, 523);
+			this.Add_Storage_Txt.Name = "Add_Storage_Txt";
+			this.Add_Storage_Txt.Size = new System.Drawing.Size(75, 23);
+			this.Add_Storage_Txt.TabIndex = 43;
+			this.Add_Storage_Txt.Text = "Update";
+			this.Add_Storage_Txt.UseVisualStyleBackColor = true;
+			this.Add_Storage_Txt.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(60, 227);
+			this.label2.Location = new System.Drawing.Point(70, 400);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(54, 13);
 			this.label2.TabIndex = 44;
@@ -179,7 +163,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(60, 253);
+			this.label3.Location = new System.Drawing.Point(70, 426);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(45, 13);
 			this.label3.TabIndex = 45;
@@ -188,60 +172,86 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(60, 279);
+			this.label4.Location = new System.Drawing.Point(70, 452);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(56, 13);
 			this.label4.TabIndex = 46;
 			this.label4.Text = "Availability";
 			// 
-			// textBox5
+			// Long_Txt
 			// 
-			this.textBox5.Location = new System.Drawing.Point(131, 220);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(163, 20);
-			this.textBox5.TabIndex = 47;
+			this.Long_Txt.Location = new System.Drawing.Point(141, 393);
+			this.Long_Txt.Name = "Long_Txt";
+			this.Long_Txt.Size = new System.Drawing.Size(163, 20);
+			this.Long_Txt.TabIndex = 47;
 			// 
-			// textBox6
+			// Lat_Txt
 			// 
-			this.textBox6.Location = new System.Drawing.Point(131, 246);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(163, 20);
-			this.textBox6.TabIndex = 48;
+			this.Lat_Txt.Location = new System.Drawing.Point(141, 419);
+			this.Lat_Txt.Name = "Lat_Txt";
+			this.Lat_Txt.Size = new System.Drawing.Size(163, 20);
+			this.Lat_Txt.TabIndex = 48;
 			// 
-			// textBox7
+			// Avab_Txt
 			// 
-			this.textBox7.Location = new System.Drawing.Point(131, 272);
-			this.textBox7.Name = "textBox7";
-			this.textBox7.Size = new System.Drawing.Size(163, 20);
-			this.textBox7.TabIndex = 49;
+			this.Avab_Txt.Location = new System.Drawing.Point(141, 445);
+			this.Avab_Txt.Name = "Avab_Txt";
+			this.Avab_Txt.Size = new System.Drawing.Size(163, 20);
+			this.Avab_Txt.TabIndex = 49;
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(80, 88);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+			this.dataGridView1.TabIndex = 50;
+			// 
+			// Stor_Id_Txt
+			// 
+			this.Stor_Id_Txt.AutoSize = true;
+			this.Stor_Id_Txt.Location = new System.Drawing.Point(70, 293);
+			this.Stor_Id_Txt.Name = "Stor_Id_Txt";
+			this.Stor_Id_Txt.Size = new System.Drawing.Size(53, 13);
+			this.Stor_Id_Txt.TabIndex = 51;
+			this.Stor_Id_Txt.Text = "StorageId";
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(141, 286);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(163, 20);
+			this.textBox1.TabIndex = 52;
 			// 
 			// AddToStorageData
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(376, 399);
-			this.Controls.Add(this.textBox7);
-			this.Controls.Add(this.textBox6);
-			this.Controls.Add(this.textBox5);
+			this.ClientSize = new System.Drawing.Size(376, 585);
+			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.Stor_Id_Txt);
+			this.Controls.Add(this.dataGridView1);
+			this.Controls.Add(this.Avab_Txt);
+			this.Controls.Add(this.Lat_Txt);
+			this.Controls.Add(this.Long_Txt);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.Update_Txt);
+			this.Controls.Add(this.Add_Storage_Txt);
 			this.Controls.Add(this.Reset_Txt);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.textBox4);
-			this.Controls.Add(this.textBox3);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.Pri_Txt);
+			this.Controls.Add(this.Siz_Txt);
+			this.Controls.Add(this.Typ_Txt);
 			this.Controls.Add(this.Price_Txt);
 			this.Controls.Add(this.Size_Txt);
 			this.Controls.Add(this.Type_Txt);
-			this.Controls.Add(this.Customer_ID_Txt);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBox1);
 			this.Name = "AddToStorageData";
 			this.Text = "AddToStorageData";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -251,22 +261,23 @@
 
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Label Customer_ID_Txt;
 		private System.Windows.Forms.Label Type_Txt;
 		private System.Windows.Forms.Label Size_Txt;
 		private System.Windows.Forms.Label Price_Txt;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox Typ_Txt;
+		private System.Windows.Forms.TextBox Siz_Txt;
+		private System.Windows.Forms.TextBox Pri_Txt;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button Reset_Txt;
-		private System.Windows.Forms.Button Update_Txt;
+		private System.Windows.Forms.Button Add_Storage_Txt;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.TextBox textBox6;
-		private System.Windows.Forms.TextBox textBox7;
+		private System.Windows.Forms.TextBox Long_Txt;
+		private System.Windows.Forms.TextBox Lat_Txt;
+		private System.Windows.Forms.TextBox Avab_Txt;
+		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.Label Stor_Id_Txt;
+		private System.Windows.Forms.TextBox textBox1;
 	}
 }

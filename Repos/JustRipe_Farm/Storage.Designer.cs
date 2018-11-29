@@ -94,7 +94,7 @@
 			this.Update.Name = "Update";
 			this.Update.Size = new System.Drawing.Size(97, 32);
 			this.Update.TabIndex = 31;
-			this.Update.Text = "Update";
+			this.Update.Text = "Add Storage";
 			this.Update.UseVisualStyleBackColor = true;
 			this.Update.Click += new System.EventHandler(this.Update_Click);
 			// 

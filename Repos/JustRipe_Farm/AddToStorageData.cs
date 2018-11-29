@@ -33,14 +33,15 @@ namespace JustRipe_Farm
 
 		private void Reset_Txt_Click(object sender, EventArgs e)
 		{
-			//Empties all the texts boxes in the form
-			this.textBox1.Text = "";	//textBox1 = CustomerID
-			this.textBox2.Text = "";	//textBox2 = Type
-			this.textBox3.Text = "";	//textBox3 = Size
-			this.textBox4.Text = "";    //textBox4 = Price
-			this.textBox5.Text = "";    //textBox5 = Latitude
-			this.textBox6.Text = "";	//textBox6 = Longitude
-			this.textBox7.Text = "";	//textBox7 = Availability
+			//Empties all the texts boxes in the AddToStorageData
+
+			this.Typ_Txt.Text = "";		//Type
+			this.Siz_Txt.Text = "";		//Size
+			this.Pri_Txt.Text = "";		//Price
+			this.Long_Txt.Text = "";    //Latitude
+			this.Lat_Txt.Text = "";		//Longitude
+			this.Avab_Txt.Text = "";    //Availability
+			this.Stor_Id_Txt.Text = ""; //StorageId
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
@@ -51,8 +52,25 @@ namespace JustRipe_Farm
 		private void button2_Click(object sender, EventArgs e)
 		{
 			SqlConnection connection;
-			using (new SqlConnection(Properties.Settings.Default.ConnectDatabase))
+			using (connection = new SqlConnection(Properties.Settings.Default.ConnectDatabase))
 			{
+				connection.Open();
+				SqlCommand sqlAdd = new SqlCommand("Insert into Storage (StorageId, Type, Size, Price, Longitude, Latitude, Availability) VALUES (@Stor_Id_Txt, @Typ_Txt, @Siz_Txt, @Pri_Txt, @Long_Txt, @Lat_Txt, @Avab_Txt); ", connection);
+				sqlAdd.CommandType = CommandType.Text;
+
+				//this code allows user to add new storage to the database
+
+				sqlAdd.Parameters.AddWithValue("@Stor_Id_Txt", Stor_Id_Txt.Text);
+				sqlAdd.Parameters.AddWithValue("@Typ_Txt", Typ_Txt.Text);
+				sqlAdd.Parameters.AddWithValue("@Siz_Txt", Siz_Txt.Text);
+				sqlAdd.Parameters.AddWithValue("@Pri_Txt", Pri_Txt.Text);
+				sqlAdd.Parameters.AddWithValue("@Long_Txt", Long_Txt.Text);
+				sqlAdd.Parameters.AddWithValue("@lat_Txt", Lat_Txt.Text);
+				sqlAdd.Parameters.AddWithValue("@Avab_Txt", Avab_Txt.Text);
+
+				int n = sqlAdd.ExecuteNonQuery();
+
+				connection.Close();
 
 			}
 
