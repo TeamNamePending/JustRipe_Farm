@@ -62,6 +62,7 @@ namespace JustRipe_Farm
         {
             New_Order page9 = new New_Order();
             page9.Show();
+            load_dgvOrders();
         }
     }
 }

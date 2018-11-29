@@ -37,12 +37,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Cust_ID_Txt
             // 
             this.Cust_ID_Txt.AccessibleName = "Cust_ID_Txt";
-            this.Cust_ID_Txt.Location = new System.Drawing.Point(129, 51);
+            this.Cust_ID_Txt.Location = new System.Drawing.Point(130, 231);
             this.Cust_ID_Txt.Name = "Cust_ID_Txt";
             this.Cust_ID_Txt.Size = new System.Drawing.Size(156, 20);
             this.Cust_ID_Txt.TabIndex = 0;
@@ -50,7 +52,7 @@
             // Order_Info_Txt
             // 
             this.Order_Info_Txt.AccessibleName = "Order_Info_Txt";
-            this.Order_Info_Txt.Location = new System.Drawing.Point(129, 115);
+            this.Order_Info_Txt.Location = new System.Drawing.Point(130, 279);
             this.Order_Info_Txt.Name = "Order_Info_Txt";
             this.Order_Info_Txt.Size = new System.Drawing.Size(156, 20);
             this.Order_Info_Txt.TabIndex = 1;
@@ -58,7 +60,7 @@
             // Total_Cost_Txt
             // 
             this.Total_Cost_Txt.AccessibleName = "Total_Cost_Txt";
-            this.Total_Cost_Txt.Location = new System.Drawing.Point(129, 180);
+            this.Total_Cost_Txt.Location = new System.Drawing.Point(130, 323);
             this.Total_Cost_Txt.Name = "Total_Cost_Txt";
             this.Total_Cost_Txt.Size = new System.Drawing.Size(156, 20);
             this.Total_Cost_Txt.TabIndex = 2;
@@ -67,25 +69,25 @@
             // Item_Count_Txt
             // 
             this.Item_Count_Txt.AccessibleName = "Item_Count_Txt";
-            this.Item_Count_Txt.Location = new System.Drawing.Point(129, 239);
+            this.Item_Count_Txt.Location = new System.Drawing.Point(130, 365);
             this.Item_Count_Txt.Name = "Item_Count_Txt";
             this.Item_Count_Txt.Size = new System.Drawing.Size(156, 20);
             this.Item_Count_Txt.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(116, 303);
+            this.button1.Location = new System.Drawing.Point(115, 407);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Save";
+            this.button1.Text = "Complete";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 54);
+            this.label1.Location = new System.Drawing.Point(36, 234);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 9;
@@ -95,7 +97,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 118);
+            this.label2.Location = new System.Drawing.Point(37, 282);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 10;
@@ -104,7 +106,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 183);
+            this.label3.Location = new System.Drawing.Point(36, 326);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 11;
@@ -114,17 +116,26 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 242);
+            this.label4.Location = new System.Drawing.Point(37, 368);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Amount of Items";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(40, 25);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(246, 150);
+            this.dataGridView1.TabIndex = 13;
+            // 
             // New_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 348);
+            this.ClientSize = new System.Drawing.Size(323, 443);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -136,6 +147,7 @@
             this.Controls.Add(this.Cust_ID_Txt);
             this.Name = "New_Order";
             this.Text = "New_Order";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +164,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
