@@ -81,6 +81,7 @@
             this.NewVehicleID.Name = "NewVehicleID";
             this.NewVehicleID.Size = new System.Drawing.Size(211, 20);
             this.NewVehicleID.TabIndex = 28;
+            this.NewVehicleID.TextChanged += new System.EventHandler(this.NewVehicleID_TextChanged);
             // 
             // UpdateVehicleID
             // 
