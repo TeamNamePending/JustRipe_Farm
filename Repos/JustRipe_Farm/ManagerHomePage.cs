@@ -43,7 +43,11 @@ namespace JustRipe_Farm
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Harvesting harvestPage = new Harvesting();
 
+            harvestPage.Show();
+
+            this.Close();
         }
 
         private void ManagerHomePage_Load(object sender, EventArgs e)
