@@ -31,7 +31,7 @@
             this.dgvUpdateVehicleData = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NewVehicleID = new System.Windows.Forms.TextBox();
             this.UpdateVehicleID = new System.Windows.Forms.Label();
             this.UpdateVehicleSaveButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,10 +39,10 @@
             this.UpdateVehicleCurrentSpace = new System.Windows.Forms.Label();
             this.UpdateVehicleType = new System.Windows.Forms.Label();
             this.UpdateVehicleAvailability = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.NewMaxSpace = new System.Windows.Forms.TextBox();
+            this.NewCurrentSpace = new System.Windows.Forms.TextBox();
+            this.NewVehicleType = new System.Windows.Forms.TextBox();
+            this.NewAvailable = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpdateVehicleData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,12 +75,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // NewVehicleID
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 158);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 20);
-            this.textBox1.TabIndex = 28;
+            this.NewVehicleID.Location = new System.Drawing.Point(207, 158);
+            this.NewVehicleID.Name = "NewVehicleID";
+            this.NewVehicleID.Size = new System.Drawing.Size(211, 20);
+            this.NewVehicleID.TabIndex = 28;
             // 
             // UpdateVehicleID
             // 
@@ -101,6 +101,7 @@
             this.UpdateVehicleSaveButton.TabIndex = 30;
             this.UpdateVehicleSaveButton.Text = "Save";
             this.UpdateVehicleSaveButton.UseVisualStyleBackColor = true;
+            this.UpdateVehicleSaveButton.Click += new System.EventHandler(this.UpdateVehicleSaveButton_Click);
             // 
             // label1
             // 
@@ -152,43 +153,43 @@
             this.UpdateVehicleAvailability.TabIndex = 35;
             this.UpdateVehicleAvailability.Text = "Available :";
             // 
-            // textBox2
+            // NewMaxSpace
             // 
-            this.textBox2.Location = new System.Drawing.Point(207, 201);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 20);
-            this.textBox2.TabIndex = 36;
+            this.NewMaxSpace.Location = new System.Drawing.Point(207, 201);
+            this.NewMaxSpace.Name = "NewMaxSpace";
+            this.NewMaxSpace.Size = new System.Drawing.Size(211, 20);
+            this.NewMaxSpace.TabIndex = 36;
             // 
-            // textBox3
+            // NewCurrentSpace
             // 
-            this.textBox3.Location = new System.Drawing.Point(207, 248);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(211, 20);
-            this.textBox3.TabIndex = 37;
+            this.NewCurrentSpace.Location = new System.Drawing.Point(207, 248);
+            this.NewCurrentSpace.Name = "NewCurrentSpace";
+            this.NewCurrentSpace.Size = new System.Drawing.Size(211, 20);
+            this.NewCurrentSpace.TabIndex = 37;
             // 
-            // textBox4
+            // NewVehicleType
             // 
-            this.textBox4.Location = new System.Drawing.Point(207, 291);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 20);
-            this.textBox4.TabIndex = 38;
+            this.NewVehicleType.Location = new System.Drawing.Point(207, 291);
+            this.NewVehicleType.Name = "NewVehicleType";
+            this.NewVehicleType.Size = new System.Drawing.Size(211, 20);
+            this.NewVehicleType.TabIndex = 38;
             // 
-            // textBox5
+            // NewAvailable
             // 
-            this.textBox5.Location = new System.Drawing.Point(207, 333);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(211, 20);
-            this.textBox5.TabIndex = 39;
+            this.NewAvailable.Location = new System.Drawing.Point(207, 333);
+            this.NewAvailable.Name = "NewAvailable";
+            this.NewAvailable.Size = new System.Drawing.Size(211, 20);
+            this.NewAvailable.TabIndex = 39;
             // 
             // AddToVehicleData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.NewAvailable);
+            this.Controls.Add(this.NewVehicleType);
+            this.Controls.Add(this.NewCurrentSpace);
+            this.Controls.Add(this.NewMaxSpace);
             this.Controls.Add(this.UpdateVehicleAvailability);
             this.Controls.Add(this.UpdateVehicleType);
             this.Controls.Add(this.UpdateVehicleCurrentSpace);
@@ -196,7 +197,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UpdateVehicleSaveButton);
             this.Controls.Add(this.UpdateVehicleID);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NewVehicleID);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvUpdateVehicleData);
@@ -213,7 +214,7 @@
         private System.Windows.Forms.DataGridView dgvUpdateVehicleData;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NewVehicleID;
         private System.Windows.Forms.Label UpdateVehicleID;
         private System.Windows.Forms.Button UpdateVehicleSaveButton;
         private System.Windows.Forms.Label label1;
@@ -221,9 +222,9 @@
         private System.Windows.Forms.Label UpdateVehicleCurrentSpace;
         private System.Windows.Forms.Label UpdateVehicleType;
         private System.Windows.Forms.Label UpdateVehicleAvailability;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox NewMaxSpace;
+        private System.Windows.Forms.TextBox NewCurrentSpace;
+        private System.Windows.Forms.TextBox NewVehicleType;
+        private System.Windows.Forms.TextBox NewAvailable;
     }
 }

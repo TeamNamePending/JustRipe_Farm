@@ -16,7 +16,8 @@ namespace JustRipe_Farm
         private static string connectionString;
         private static DatabaseCode databaseCode;
 
-
+        
+          
         // acting as the connection to SQL server Database,  the SqlConnection is the constructor, new instance of the class
         System.Data.SqlClient.SqlConnection connectToDataBase;
 
@@ -88,8 +89,7 @@ namespace JustRipe_Farm
             // end of method
         }
 
-       
 
-
+        
     }
 }

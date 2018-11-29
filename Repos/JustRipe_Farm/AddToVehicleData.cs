@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace JustRipe_Farm
 {
     public partial class AddToVehicleData : Form
@@ -56,5 +57,23 @@ namespace JustRipe_Farm
         {
 
         }
+
+        private void UpdateVehicleSaveButton_Click(object sender, EventArgs e)
+        {
+             //Update vehicle data  
+              //SqlConnection connection = new SqlConnection();
+              //connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
+             // connection.Open();
+
+             // SqlCommand sqlAdd = new SqlCommand("INSERT INTO Vehicles (VehicleID, MaxSpace, CurrentSpace, Type, Availability) VALUES (@NewVehicleID @NewMaxSpace @NewCurrentSpace @NewVehicleType @NewAvailable); ", connection);
+              
+
+            //canvas example code
+            //public static String SelectAll = "SELECT * FROM Person";
+            //public static String Insert = "INSERT INTO Person (Name, Age) VALUES (@Name, @Age)";
+
+
+        }
+    }
     }
 }
