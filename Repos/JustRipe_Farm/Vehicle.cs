@@ -50,5 +50,16 @@ namespace JustRipe_Farm
         {
 
         }
+
+        private void VehicleUpdateButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            AddToVehicleData page12 = new AddToVehicleData();
+            page12.Show();
+
+
+            
+        }
     }
 }
