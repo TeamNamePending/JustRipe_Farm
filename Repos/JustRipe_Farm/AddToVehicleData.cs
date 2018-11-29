@@ -51,5 +51,10 @@ namespace JustRipe_Farm
             page1.Show();
             this.Close();
         }
+
+        private void Username_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
