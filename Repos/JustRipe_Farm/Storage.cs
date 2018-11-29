@@ -56,5 +56,14 @@ namespace JustRipe_Farm
         {
 
         }
-    }
+
+		private void Update_Click(object sender, EventArgs e)
+		{
+			//this closes the storage page to open a new form where the user can add new data to the database.
+			this.Close();
+			AddToStorageData page13 = new AddToStorageData();
+			page13.Show();
+
+		}
+	}
 }
