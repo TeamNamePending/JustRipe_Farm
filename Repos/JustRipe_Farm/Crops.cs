@@ -125,8 +125,10 @@ namespace JustRipe_Farm
             sqlAdd.Parameters.AddWithValue("@cropValue", storageTemperature);
             sqlAdd.Parameters.AddWithValue("@treatTime", treatmentDateTime);
             sqlAdd.Parameters.AddWithValue("@harvTime", harvestDateTime);
-            sqlAdd.ExecuteNonQuery();
+            int n = sqlAdd.ExecuteNonQuery();
+            MessageBox.Show("n=" + n);
 
+            load_dgvCrops();
 
         }
 
@@ -211,7 +213,7 @@ namespace JustRipe_Farm
         {
           
 
-            CropsInit(8);
+            CropsInit(1);
             
         }
 
