@@ -19,13 +19,7 @@ namespace JustRipe_Farm
 
         string passwordInput;      
 
-        
-
-        string validPasswordCheck = "select * from UserInfo where Username like @Username and Password like @Password";
-
-        
-
-
+      // redundant string  string validPasswordCheck = "select * from UserInfo where Username like @Username and Password like @Password";
 
         private void load_dgvUserInfo()
         {
@@ -33,6 +27,13 @@ namespace JustRipe_Farm
             dgvUserLogin.DataSource = ds.Tables[0]; 
 
         }
+
+    
+
+
+
+
+
   
 		public Login()
 		{
@@ -50,11 +51,9 @@ namespace JustRipe_Farm
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
             connection.Open();
-
-            
+        
             string validUserCheck = "select UserID from Userinfo where Username = @Username AND Password = @pwd; ";
             
-
             SqlCommand sql = new SqlCommand(validUserCheck, connection);
             SqlCommand userMenu = new SqlCommand(jobTypeCheck, connection);
 
@@ -69,7 +68,6 @@ namespace JustRipe_Farm
 
             dgvUserLogin.DataSource = ds.Tables[0];  // ds.Rows?
             // if there is one row in the table then the credentials are correct
-
 
             if (ds.Tables[0].Rows.Count == 1 )
 
@@ -105,19 +103,6 @@ namespace JustRipe_Farm
 
             }
             
-            
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -165,4 +150,9 @@ namespace JustRipe_Farm
 
         }
     }
+
+    
+
+
+
 }

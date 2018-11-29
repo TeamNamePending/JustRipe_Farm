@@ -78,5 +78,10 @@ namespace JustRipe_Farm
         {
 
         }
-    }
+
+		private void Cust_ID_Txt_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

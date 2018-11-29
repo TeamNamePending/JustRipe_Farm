@@ -33,13 +33,14 @@
             this.dgvVehicle = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.VehicleUpdateButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(580, 404);
+            this.button1.Location = new System.Drawing.Point(557, 404);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 34);
             this.button1.TabIndex = 0;
@@ -49,7 +50,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(691, 404);
+            this.button2.Location = new System.Drawing.Point(665, 404);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 34);
             this.button2.TabIndex = 26;
@@ -87,11 +88,22 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
+            // VehicleUpdateButton
+            // 
+            this.VehicleUpdateButton.Location = new System.Drawing.Point(49, 404);
+            this.VehicleUpdateButton.Name = "VehicleUpdateButton";
+            this.VehicleUpdateButton.Size = new System.Drawing.Size(90, 34);
+            this.VehicleUpdateButton.TabIndex = 30;
+            this.VehicleUpdateButton.Text = "Update";
+            this.VehicleUpdateButton.UseVisualStyleBackColor = true;
+            this.VehicleUpdateButton.Click += new System.EventHandler(this.VehicleUpdateButton_Click);
+            // 
             // Vehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.VehicleUpdateButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvVehicle);
@@ -113,5 +125,6 @@
         private System.Windows.Forms.DataGridView dgvVehicle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button VehicleUpdateButton;
     }
 }
