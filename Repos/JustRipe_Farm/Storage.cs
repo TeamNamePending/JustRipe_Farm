@@ -63,7 +63,8 @@ namespace JustRipe_Farm
 			this.Close();
 			AddToStorageData page13 = new AddToStorageData();
 			page13.Show();
-
+			load_dgvStorage();
+			
 		}
 	}
 }
