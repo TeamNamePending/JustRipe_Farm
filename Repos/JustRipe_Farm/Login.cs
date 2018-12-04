@@ -14,7 +14,7 @@ namespace JustRipe_Farm
 {
 	public partial class Login : Form
 	{
-        string userNameInput;
+        public string userNameInput;
         string jobTypeCheck = "select userType from UserInfo where (userType == Manager)";
 
         string passwordInput;      
@@ -148,6 +148,15 @@ namespace JustRipe_Farm
         {
             passwordInput = Console.ReadLine();
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+
+            Register registrationPage = new Register();
+
+            registrationPage.Show();
         }
     }
 
