@@ -22,8 +22,8 @@ namespace JustRipe_Farm
         public string userNameInput;
        public  string passwordInput;
        public  string confirmPasswordInput;
-
-      public string UserNameExist = "select Username from Userinfo;";
+       
+      public string UserNameExist = "select UserID from  Userinfo where Username = @NewUsername ;";
 
         // SqlDataReader dr = sql.ExecuteReader();
 
@@ -46,7 +46,7 @@ namespace JustRipe_Farm
 
         private void Load_dgvUserInfo()
         {
-            DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM UserInfo[Username]");
+            DataSet ds = DatabaseCode._instance().getDataSet("SELECT  FROM UserInfo[Username];");
             dataGridView1.DataSource = ds.Tables[0];
 
         }
@@ -64,7 +64,7 @@ namespace JustRipe_Farm
             SqlCommand password = new SqlCommand(passwordInput, connection);
             SqlCommand rePassword = new SqlCommand(confirmPasswordInput, connection);
 
-            sql.Parameters.Add(new SqlParameter("Username", textBox1.Text));
+            sql.Parameters.Add(new SqlParameter("NewUsername", textBox1.Text));
             sql.Parameters.Add(new SqlParameter("pwd", textBox2.Text));
 
             SqlDataReader dr = sql.ExecuteReader();
@@ -75,15 +75,17 @@ namespace JustRipe_Farm
 
             dataGridView1.DataSource = ds.Tables[0];
 
-            if (ds.Tables[0].Rows.Count == 1)
+            if (ds.Tables[0].Rows.Count == 0)
             {
-                MessageBox.Show("Username Already exists!");
+                
+
+
 
 
             }
             else
             {
-
+                MessageBox.Show("Username Already exists!");
             }
 
      //      dgvUserLogin.DataSource = ds.Tables[0];  // ds.Rows?
@@ -95,6 +97,57 @@ namespace JustRipe_Farm
         {
             
 
+
+        }
+
+        public void CheckPasswordValid()
+        {
+            const int MINIMUM_LENGTH  = 6;
+            const int MAX_LENGTH = 15;
+            int numberCount = 0;
+            int upperCount = 0;
+
+            // checking password meets the minimum length
+            if (passwordInput.Length >= MINIMUM_LENGTH )
+            { 
+                // if yes, then carry on
+
+              if (passwordInput.Length <= MAX_LENGTH)
+                {
+                    for ( int i = 0; i < passwordInput.Length; i++)
+                    {
+                        if (char.IsUpper(passwordInput[i])) upperCount++;
+                        if (char.IsDigit(passwordInput[i])) numberCount++;
+
+                    }
+                    if (upperCount >= 1)
+                    {
+                        if (numberCount >= 1)
+                        {
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("You have not used any numbers, please use atleast one number");
+
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("You have not used any Upper case, please use atleast one");
+                    }
+                }
+              else
+                {
+                    MessageBox.Show("Password is too long, please enter between 6 to 15 digits");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Password is too short, please enter between 6 to 15 digits");
+            }
 
         }
 
@@ -112,6 +165,16 @@ namespace JustRipe_Farm
         private void button1_Click(object sender, EventArgs e)
         {
             InitializeDatabase();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
