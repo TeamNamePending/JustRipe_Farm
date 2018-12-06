@@ -75,7 +75,7 @@ namespace JustRipe_Farm
             {
 
                 connection.Open();
-                SqlCommand sqlAdd = new SqlCommand("INSERT INTO Vehicles (VehicleID, MaxSpace, CurrentSpace, Type, Availability) VALUES (@NewVehicleID @NewMaxSpace @NewCurrentSpace @NewVehicleType @NewAvailable); ", connection);
+                SqlCommand sqlAdd = new SqlCommand("INSERT INTO Vehicles (VehiclesID, Max_Space, Current_Space, Type, Availability) VALUES (@NewVehicleID, @NewMaxSpace, @NewCurrentSpace, @NewVehicleType, @NewAvailable); ", connection);
 
                 sqlAdd.CommandType = CommandType.Text;
 
@@ -85,6 +85,9 @@ namespace JustRipe_Farm
                 sqlAdd.Parameters.AddWithValue("@NewVehicleType", NewVehicleType.Text);
                 sqlAdd.Parameters.AddWithValue("@NewAvailable", NewAvailable.Text);
 
+
+                int n = sqlAdd.ExecuteNonQuery();
+                connection.Close();
 
 
             }
