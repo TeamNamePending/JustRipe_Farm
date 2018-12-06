@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 
 namespace JustRipe_Farm
@@ -17,6 +18,13 @@ namespace JustRipe_Farm
         public Register()
         {
             InitializeComponent();
+
+            textBox2.PasswordChar = '*';
+            textBox3.PasswordChar = '*';
+            textBox2.MaxLength = 15;
+            textBox3.MaxLength = 15;
+
+
         }
 
         public string userNameInput;
@@ -88,9 +96,11 @@ namespace JustRipe_Farm
                 MessageBox.Show("Username Already exists!");
             }
 
-     //      dgvUserLogin.DataSource = ds.Tables[0];  // ds.Rows?
-     //     dataGridView1.DataSource = ds.
+            //      dgvUserLogin.DataSource = ds.Tables[0];  // ds.Rows?
+            //     dataGridView1.DataSource = ds.
 
+            CheckPasswordValid();
+            Encryption(textBox1.Text);
         }
 
         public void CheckNewLogin()
@@ -102,8 +112,8 @@ namespace JustRipe_Farm
 
         public void CheckPasswordValid()
         {
-            const int MINIMUM_LENGTH  = 6;
-            const int MAX_LENGTH = 15;
+             int MINIMUM_LENGTH  = 6;
+             
             int numberCount = 0;
             int upperCount = 0;
 
@@ -112,8 +122,8 @@ namespace JustRipe_Farm
             { 
                 // if yes, then carry on
 
-              if (passwordInput.Length <= MAX_LENGTH)
-                {
+              
+                
                     for ( int i = 0; i < passwordInput.Length; i++)
                     {
                         if (char.IsUpper(passwordInput[i])) upperCount++;
@@ -124,6 +134,11 @@ namespace JustRipe_Farm
                     {
                         if (numberCount >= 1)
                         {
+                            if (passwordInput == confirmPasswordInput)
+                            {
+                                MessageBox.Show("Account registered!");
+                            }
+                            else MessageBox.Show("Passwords do not match");
 
                         }
                         else
@@ -143,13 +158,28 @@ namespace JustRipe_Farm
                     MessageBox.Show("Password is too long, please enter between 6 to 15 digits");
                 }
 
-            }
-            else
-            {
-                MessageBox.Show("Password is too short, please enter between 6 to 15 digits");
-            }
+            
+            
 
         }
+
+
+        static string Encryption( string s )
+        {
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                UTF8Encoding utf8 =  new UTF8Encoding();
+                byte[] info = md5.ComputeHash(utf8.GetBytes(s));
+
+                return Convert.ToBase64String(info);
+
+
+            }
+
+
+
+        }
+
 
 
         private void Register_Load(object sender, EventArgs e)
@@ -165,6 +195,8 @@ namespace JustRipe_Farm
         private void button1_Click(object sender, EventArgs e)
         {
             InitializeDatabase();
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -174,7 +206,12 @@ namespace JustRipe_Farm
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+           passwordInput = textBox2.Text;
+        }
 
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            confirmPasswordInput = textBox3.Text; ;
         }
     }
 }
