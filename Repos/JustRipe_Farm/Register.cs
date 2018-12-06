@@ -206,12 +206,12 @@ namespace JustRipe_Farm
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-           passwordInput = Console.ReadLine();
+           passwordInput = textBox2.Text;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            confirmPasswordInput = Console.ReadLine();
+            confirmPasswordInput = textBox3.Text; ;
         }
     }
 }

@@ -57,6 +57,8 @@ namespace JustRipe_Farm
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM Crops (HarvestTime);");
+            dataGridView1.DataSource = ds.Tables[0];
         }
     }
 }
