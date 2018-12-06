@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace JustRipe_Farm
 {
     public partial class Harvesting : Form
@@ -15,7 +15,18 @@ namespace JustRipe_Farm
         public Harvesting()
         {
             InitializeComponent();
+            LoadHarvest_Timetable();
         }
+
+        SqlConnection connection = new SqlConnection();
+
+        
+       
+
+
+
+
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -57,8 +68,21 @@ namespace JustRipe_Farm
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM Crops (HarvestTime);");
+            
+        }
+
+         private void LoadHarvest_Timetable()
+        {
+            DataSet ds = DatabaseCode._instance().getDataSet("SELECT HarvestTime FROM Crops  ");
             dataGridView1.DataSource = ds.Tables[0];
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
+            connection.Open();
+
         }
     }
 }

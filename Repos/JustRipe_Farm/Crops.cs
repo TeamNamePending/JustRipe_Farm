@@ -10,9 +10,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 
-// for the timers
-using System.Timers;
-
 namespace JustRipe_Farm
 {
     public partial class Crops : Form
@@ -130,13 +127,7 @@ namespace JustRipe_Farm
 
             load_dgvCrops();
 
-        }
-
-        private void UpdateCrops()
-        {   // a suggestion as a potential fix, before I was getting an error on line 98 when call UpdateCrops method
-            // something about no arguement given that corresponds to the required formal parameter
-            throw new NotImplementedException();
-        }
+        }     
 
         public static void UpdateCrops(CropAttributes cropAttributes)
 
