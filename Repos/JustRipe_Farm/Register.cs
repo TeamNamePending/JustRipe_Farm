@@ -30,6 +30,7 @@ namespace JustRipe_Farm
         public string userNameInput;
        public  string passwordInput;
        public  string confirmPasswordInput;
+        public int newUserID = 10;
        
       public string UserNameExist = "select UserID from  Userinfo where Username = @NewUsername ;";
 
@@ -47,14 +48,14 @@ namespace JustRipe_Farm
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-          userNameInput = Console.ReadLine();
+            userNameInput = textBox1.Text;
 
 
         }
 
         private void Load_dgvUserInfo()
         {
-            DataSet ds = DatabaseCode._instance().getDataSet("SELECT  FROM UserInfo[Username];");
+            DataSet ds = DatabaseCode._instance().getDataSet("SELECT * FROM UserInfo;");
             dataGridView1.DataSource = ds.Tables[0];
 
         }
@@ -137,7 +138,9 @@ namespace JustRipe_Farm
                             if (passwordInput == confirmPasswordInput)
                             {
                                 MessageBox.Show("Account registered!");
+                                      Encryption(passwordInput);
                                     AddToDatabase();
+                                    Load_dgvUserInfo();
 
                             }
                             else MessageBox.Show("Passwords do not match");
@@ -184,20 +187,25 @@ namespace JustRipe_Farm
 
         public void AddToDatabase()
         {
-
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
             connection.Open();
 
-            SqlCommand sqlAdd = new SqlCommand("INSERT INTO UserInfo (passwordInput, userNameInput) VALUES ( @password, @username); ", connection);
-
+            SqlCommand sqlAdd = new SqlCommand("INSERT INTO UserInfo (UserID, Username, Password) VALUES ( @ID ,@username, @password) ", connection);
 
             // must remember to change the datatype in the database Crops table for these, so they display date that reflects this
-            sqlAdd.Parameters.AddWithValue("@password", passwordInput);
-            sqlAdd.Parameters.AddWithValue("@username", userNameInput);
+
             
+            newUserID++;
+            
+            sqlAdd.Parameters.AddWithValue("@username", userNameInput);
+            sqlAdd.Parameters.AddWithValue("@password", passwordInput);
+            sqlAdd.Parameters.AddWithValue("@ID", newUserID); 
+
+            sqlAdd.ExecuteNonQuery();
 
         }
+       
 
         private void Register_Load(object sender, EventArgs e)
         {
