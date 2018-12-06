@@ -144,6 +144,12 @@
     <Compile Include="Storage.Designer.cs">
       <DependentUpon>Storage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Order.Designer.cs">
+      <DependentUpon>Update_Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vehicle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Storage.resx">
       <DependentUpon>Storage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Order.resx">
+      <DependentUpon>Update_Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle.resx">
       <DependentUpon>Vehicle.cs</DependentUpon>

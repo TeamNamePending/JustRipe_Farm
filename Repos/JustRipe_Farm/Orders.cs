@@ -64,5 +64,12 @@ namespace JustRipe_Farm
             page9.Show();
             load_dgvOrders();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Update_Order page10 = new Update_Order();
+            page10.Show();
+            load_dgvOrders();
+        }
     }
-}
+    }
