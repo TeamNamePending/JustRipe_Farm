@@ -105,28 +105,28 @@
 			this.Typ_Txt.Location = new System.Drawing.Point(141, 315);
 			this.Typ_Txt.Name = "Typ_Txt";
 			this.Typ_Txt.Size = new System.Drawing.Size(163, 20);
-			this.Typ_Txt.TabIndex = 38;
+			this.Typ_Txt.TabIndex = 2;
 			// 
 			// Siz_Txt
 			// 
 			this.Siz_Txt.Location = new System.Drawing.Point(141, 341);
 			this.Siz_Txt.Name = "Siz_Txt";
 			this.Siz_Txt.Size = new System.Drawing.Size(163, 20);
-			this.Siz_Txt.TabIndex = 39;
+			this.Siz_Txt.TabIndex = 3;
 			// 
 			// Pri_Txt
 			// 
 			this.Pri_Txt.Location = new System.Drawing.Point(141, 367);
 			this.Pri_Txt.Name = "Pri_Txt";
 			this.Pri_Txt.Size = new System.Drawing.Size(163, 20);
-			this.Pri_Txt.TabIndex = 40;
+			this.Pri_Txt.TabIndex = 4;
 			// 
 			// button1
 			// 
 			this.button1.Location = new System.Drawing.Point(245, 523);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 41;
+			this.button1.TabIndex = 10;
 			this.button1.Text = "Cancel";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -136,7 +136,7 @@
 			this.Reset_Txt.Location = new System.Drawing.Point(141, 523);
 			this.Reset_Txt.Name = "Reset_Txt";
 			this.Reset_Txt.Size = new System.Drawing.Size(75, 23);
-			this.Reset_Txt.TabIndex = 42;
+			this.Reset_Txt.TabIndex = 9;
 			this.Reset_Txt.Text = "Reset";
 			this.Reset_Txt.UseVisualStyleBackColor = true;
 			this.Reset_Txt.Click += new System.EventHandler(this.Reset_Txt_Click);
@@ -146,7 +146,7 @@
 			this.Add_Storage_Txt.Location = new System.Drawing.Point(37, 523);
 			this.Add_Storage_Txt.Name = "Add_Storage_Txt";
 			this.Add_Storage_Txt.Size = new System.Drawing.Size(75, 23);
-			this.Add_Storage_Txt.TabIndex = 43;
+			this.Add_Storage_Txt.TabIndex = 8;
 			this.Add_Storage_Txt.Text = "Update";
 			this.Add_Storage_Txt.UseVisualStyleBackColor = true;
 			this.Add_Storage_Txt.Click += new System.EventHandler(this.button2_Click);
@@ -183,21 +183,21 @@
 			this.Long_Txt.Location = new System.Drawing.Point(141, 393);
 			this.Long_Txt.Name = "Long_Txt";
 			this.Long_Txt.Size = new System.Drawing.Size(163, 20);
-			this.Long_Txt.TabIndex = 47;
+			this.Long_Txt.TabIndex = 5;
 			// 
 			// Lat_Txt
 			// 
 			this.Lat_Txt.Location = new System.Drawing.Point(141, 419);
 			this.Lat_Txt.Name = "Lat_Txt";
 			this.Lat_Txt.Size = new System.Drawing.Size(163, 20);
-			this.Lat_Txt.TabIndex = 48;
+			this.Lat_Txt.TabIndex = 6;
 			// 
 			// Avab_Txt
 			// 
 			this.Avab_Txt.Location = new System.Drawing.Point(141, 445);
 			this.Avab_Txt.Name = "Avab_Txt";
 			this.Avab_Txt.Size = new System.Drawing.Size(163, 20);
-			this.Avab_Txt.TabIndex = 49;
+			this.Avab_Txt.TabIndex = 7;
 			// 
 			// dataGridView1
 			// 
@@ -212,22 +212,22 @@
 			this.Stor_Id_Txt.AutoSize = true;
 			this.Stor_Id_Txt.Location = new System.Drawing.Point(70, 293);
 			this.Stor_Id_Txt.Name = "Stor_Id_Txt";
-			this.Stor_Id_Txt.Size = new System.Drawing.Size(53, 13);
+			this.Stor_Id_Txt.Size = new System.Drawing.Size(43, 13);
 			this.Stor_Id_Txt.TabIndex = 51;
-			this.Stor_Id_Txt.Text = "StorageId";
+			this.Stor_Id_Txt.Text = "StoreID";
 			// 
 			// textBox1
 			// 
 			this.textBox1.Location = new System.Drawing.Point(141, 286);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(163, 20);
-			this.textBox1.TabIndex = 52;
+			this.textBox1.TabIndex = 1;
 			// 
 			// AddToStorageData
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(376, 585);
+			this.ClientSize = new System.Drawing.Size(392, 585);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.Stor_Id_Txt);
 			this.Controls.Add(this.dataGridView1);
