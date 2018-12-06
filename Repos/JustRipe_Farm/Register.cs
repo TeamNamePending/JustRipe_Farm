@@ -137,6 +137,8 @@ namespace JustRipe_Farm
                             if (passwordInput == confirmPasswordInput)
                             {
                                 MessageBox.Show("Account registered!");
+                                    AddToDatabase();
+
                             }
                             else MessageBox.Show("Passwords do not match");
 
@@ -180,7 +182,22 @@ namespace JustRipe_Farm
 
         }
 
+        public void AddToDatabase()
+        {
 
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
+            connection.Open();
+
+            SqlCommand sqlAdd = new SqlCommand("INSERT INTO UserInfo (passwordInput, userNameInput) VALUES ( @password, @username); ", connection);
+
+
+            // must remember to change the datatype in the database Crops table for these, so they display date that reflects this
+            sqlAdd.Parameters.AddWithValue("@password", passwordInput);
+            sqlAdd.Parameters.AddWithValue("@username", userNameInput);
+            
+
+        }
 
         private void Register_Load(object sender, EventArgs e)
         {
@@ -212,6 +229,15 @@ namespace JustRipe_Farm
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             confirmPasswordInput = textBox3.Text; ;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+                
+            Login page1 = new Login();
+            page1.Show();
         }
     }
 }
