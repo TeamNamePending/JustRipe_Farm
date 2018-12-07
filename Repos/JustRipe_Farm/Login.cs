@@ -75,7 +75,10 @@ namespace JustRipe_Farm
                 MessageBox.Show("Correct login, proceed!");
 
                 // I realise this may not be the most efficient way to check to see if this is the manager or not
-                // So if there is time can try to optimize so able to check if UserID == 1, which we know is manager
+                // So if there is time can try to optimize so able to check if UserType ="Manager" , which we know is manager
+                //SELECT UserType FROM ??? WHERE Username = '" + textBox1.Text +"'"
+
+                // check if UserType == "Manager"
                 if (textBox1.Text == "Mark")
                 {
                     ManagerHomePage managerMenu = new ManagerHomePage();

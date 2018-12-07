@@ -15,6 +15,7 @@ namespace JustRipe_Farm
 {
     public partial class Register : Form
     {
+        private string encryptedPwd;
         public Register()
         {
             InitializeComponent();
@@ -70,11 +71,11 @@ namespace JustRipe_Farm
             connection.Open();
 
             SqlCommand sql = new SqlCommand(UserNameExist, connection);
-            SqlCommand password = new SqlCommand(passwordInput, connection);
-            SqlCommand rePassword = new SqlCommand(confirmPasswordInput, connection);
+           // SqlCommand password = new SqlCommand(passwordInput, connection);
+            //SqlCommand rePassword = new SqlCommand(confirmPasswordInput, connection);
 
             sql.Parameters.Add(new SqlParameter("NewUsername", textBox1.Text));
-            sql.Parameters.Add(new SqlParameter("pwd", textBox2.Text));
+            sql.Parameters.Add(new SqlParameter("pwd", encryptedPwd));
 
             SqlDataReader dr = sql.ExecuteReader();
             DataSet ds = new DataSet();
@@ -138,7 +139,7 @@ namespace JustRipe_Farm
                             if (passwordInput == confirmPasswordInput)
                             {
                                 MessageBox.Show("Account registered!");
-                                      Encryption(passwordInput);
+                                    encryptedPwd =  Encryption(passwordInput);
                                     AddToDatabase();
                                     Load_dgvUserInfo();
 
