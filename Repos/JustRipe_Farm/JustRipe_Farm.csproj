@@ -72,7 +72,6 @@
     <Compile Include="AddToVehicleData.Designer.cs">
       <DependentUpon>AddToVehicleData.cs</DependentUpon>
     </Compile>
-    <Compile Include="CropAttributes.cs" />
     <Compile Include="DatabaseCode.cs" />
     <Compile Include="Fertilisier.cs">
       <SubType>Form</SubType>
