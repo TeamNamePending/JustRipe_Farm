@@ -75,7 +75,15 @@ namespace JustRipe_Farm
             //SqlCommand rePassword = new SqlCommand(confirmPasswordInput, connection);
 
             sql.Parameters.Add(new SqlParameter("NewUsername", textBox1.Text));
-            sql.Parameters.Add(new SqlParameter("pwd", encryptedPwd));
+
+         //   if (string.IsNullOrEmpty(encryptedPwd))
+       //     {
+       //         sql.Parameters.AddWithValue("@pwd", DBNull.Value);
+        //    }
+         //   else
+        //    {  // if i have encryptedPwd I will get error as seem to think it is null
+                sql.Parameters.Add(new SqlParameter("pwd", passwordInput));
+          //  }
 
             SqlDataReader dr = sql.ExecuteReader();
             DataSet ds = new DataSet();

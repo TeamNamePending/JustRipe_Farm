@@ -117,13 +117,17 @@ namespace JustRipe_Farm
 
             string validUserCheck = "select UserID from Userinfo where Username = @Username AND Password = @pwd; ";
 
+            string jobTypeCheck = " SELECT UserType FROM UserInfo  WHERE Username = '" + textBox1.Text + "'";
+
             SqlCommand sql = new SqlCommand(validUserCheck, connection);
             SqlCommand userMenu = new SqlCommand(jobTypeCheck, connection);
 
             sql.Parameters.Add(new SqlParameter("Username", textBox1.Text));
             sql.Parameters.Add(new SqlParameter("pwd", textBox2.Text));
-
+            userMenu.Parameters.Add(new SqlParameter("Username", textBox1.Text));
             SqlDataReader dr = sql.ExecuteReader();
+
+            
 
             DataSet ds = new DataSet();
 
@@ -144,7 +148,7 @@ namespace JustRipe_Farm
                           //SELECT UserType FROM ??? WHERE Username = '" + textBox1.Text +"'"
 
                           // check if UserType == "Manager"
-                          if (textBox1.Text == "Mark")
+                          if ( textBox1.Text == "Mark")
                              {
                                ManagerHomePage managerMenu = new ManagerHomePage();
                                 managerMenu.Show();
