@@ -31,7 +31,7 @@ namespace JustRipe_Farm
         public string userNameInput;
        public  string passwordInput;
        public  string confirmPasswordInput;
-        public int newUserID = 10;
+     
        
       public string UserNameExist = "select UserID from  Userinfo where Username = @NewUsername ;";
 
@@ -147,7 +147,7 @@ namespace JustRipe_Farm
                             if (passwordInput == confirmPasswordInput)
                             {
                                 MessageBox.Show("Account registered!");
-                                    encryptedPwd =  Encryption(passwordInput);
+                                    passwordInput =  Encryption(passwordInput);
                                     AddToDatabase();
                                     Load_dgvUserInfo();
 
@@ -200,16 +200,16 @@ namespace JustRipe_Farm
             connection.ConnectionString = Properties.Settings.Default.ConnectDatabase;
             connection.Open();
 
-            SqlCommand sqlAdd = new SqlCommand("INSERT INTO UserInfo (UserID, Username, Password) VALUES ( @ID ,@username, @password) ", connection);
+            SqlCommand sqlAdd = new SqlCommand("INSERT INTO UserInfo (Username, Password) VALUES (@username, @password) ", connection);
 
             // must remember to change the datatype in the database Crops table for these, so they display date that reflects this
 
             
-            newUserID++;
+            
             
             sqlAdd.Parameters.AddWithValue("@username", userNameInput);
             sqlAdd.Parameters.AddWithValue("@password", passwordInput);
-            sqlAdd.Parameters.AddWithValue("@ID", newUserID); 
+            
 
             sqlAdd.ExecuteNonQuery();
 
