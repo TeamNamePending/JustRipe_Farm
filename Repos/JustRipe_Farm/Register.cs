@@ -113,12 +113,52 @@ namespace JustRipe_Farm
             Encryption(textBox1.Text);
         }
 
-        public void CheckNewLogin()
+        
+        public String CreateSalt(int saltSize)
         {
-            
-
+            var range = new System.Security.Cryptography.RNGCryptoServiceProvider();
+            var size = new byte[saltSize];
+            range.GetBytes(size);
+            return Convert.ToBase64String(size);
 
         }
+
+        public String GenerateSHA256Hash(string salt, string input)
+        {
+            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + salt);
+            System.Security.Cryptography.SHA256Managed hashString = new System.Security.Cryptography.SHA256Managed();
+
+            byte[] hash = hashString.ComputeHash(bytes);
+
+            return ByteArrayToHexString(hash);
+
+        }
+
+        public  static String ByteArrayToHexString(byte[] b)
+        {
+            StringBuilder hex = new StringBuilder(b.Length * 2);
+            
+            foreach(byte by in b)
+            {
+                hex.AppendFormat("{0:x2}", b);
+            }
+
+            return hex.ToString();
+        }
+
+        public static byte[] HexStringToByte(string hex)
+        {
+          int charNumbers = hex.Length;
+            byte[] bytes = new byte[charNumbers / 2];
+
+            for ( int i = 0; i < charNumbers; i += 2)
+            {
+                bytes[1 / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
+            }
+            return bytes;
+        }
+
+
 
         public void CheckPasswordValid()
         {
