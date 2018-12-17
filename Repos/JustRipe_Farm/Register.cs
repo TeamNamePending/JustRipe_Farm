@@ -111,6 +111,7 @@ namespace JustRipe_Farm
 
             CheckPasswordValid();
             Encryption(textBox1.Text);
+
         }
 
         
@@ -131,6 +132,20 @@ namespace JustRipe_Farm
             byte[] hash = hashString.ComputeHash(bytes);
 
             return ByteArrayToHexString(hash);
+
+        }
+
+        static string getMD5Hash(System.Security.Cryptography.MD5 md5Hash, string input)
+        {
+            byte[] info =  md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            StringBuilder sBuilder = new StringBuilder();
+
+            for ( int i = 0; i < info.Length; i++)
+            {
+                sBuilder.Append(info[i].ToString(" x2"));
+            }
+            return sBuilder.ToString();
 
         }
 
@@ -270,6 +285,7 @@ namespace JustRipe_Farm
         {
             InitializeDatabase();
 
+           
 
         }
 
